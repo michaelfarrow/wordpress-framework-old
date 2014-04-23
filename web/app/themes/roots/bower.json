@@ -1,0 +1,29 @@
+{
+  "name": "Weyforth Framework",
+  "version": "0.1.0",
+  "description": "Base Framework",
+  "authors": [
+    "Mike Farrow <contact@mikefarrow.co.uk>"
+  ],
+  "license": "Proprietary",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": null,
+    "cookies-js": "*",
+    "jquery": "1.*",
+    "jquery-ui": "*",
+    "modernizr": null,
+    "underscore": null,
+    "underscore.string": null,
+    "backbone": null,
+    "handlebars": null,
+    "bootstrap-sass-official": null
+  }
+}

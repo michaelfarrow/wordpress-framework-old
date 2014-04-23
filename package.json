@@ -1,0 +1,15 @@
+{
+  "name": "tabitha_webb",
+  "version": "0.1.0",
+  "description": "Tabitha Webb",
+  "authors": [
+    "Mike Farrow <mike.farrow@aesopagency.com>"
+  ],
+  "license": "Proprietary",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-compass": "~0.2.0",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-cssmin": "*"
+  }
+}
