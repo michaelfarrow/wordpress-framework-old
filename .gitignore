@@ -34,3 +34,6 @@ bin
 
 composer.lock
 /.sass-cache
+/web/app/themes/roots/libs
+/web/app/themes/roots/acf
+/web/app/themes/roots/acf-fields

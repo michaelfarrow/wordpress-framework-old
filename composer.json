@@ -31,7 +31,9 @@
     "psr-0": {"Bedrock\\Installer": "scripts"}
   },
   "scripts": {
-    "post-install-cmd": ["Bedrock\\Installer::addSalts"]
+    "post-install-cmd": ["cd web/app/themes/roots; bower install"],
+    "post-install-cmd": ["Bedrock\\Installer::addSalts"],
+    "post-update-cmd": ["cd web/app/themes/roots; bower install"]
   },
   "repositories": [
     {
@@ -52,6 +54,54 @@
           "fancyguy/webroot-installer": "1.1.0"
         }
       }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "acf/options-page",
+        "version": "1.0",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "http://download.advancedcustomfields.com/OPN8-FA4J-Y2LW-81LS/trunk/"
+        },
+        "require" : {
+          "fancyguy/webroot-installer": "1.1.0",
+          "wpackagist/advanced-custom-fields": "*"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "acf/flexible-content-field",
+        "version": "1.0",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "http://download.advancedcustomfields.com/FC9O-H6VN-E4CL-LT33/trunk/"
+        },
+        "require" : {
+          "fancyguy/webroot-installer": "1.1.0",
+          "wpackagist/advanced-custom-fields": "*"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "acf/repeater-field",
+        "version": "1.0",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "http://download.advancedcustomfields.com/QJF7-L4IX-UCNP-RF2W/trunk/"
+        },
+        "require" : {
+          "fancyguy/webroot-installer": "1.1.0",
+          "wpackagist/advanced-custom-fields": "*"
+        }
+      }
     }
   ],
   "require": {
@@ -59,10 +109,18 @@
     "wordpress/wordpress": "3.9",
     "fancyguy/webroot-installer": "1.1.0",
     "composer/installers": "v1.0.12",
-    "vlucas/phpdotenv": "~1.0.6"
+    "vlucas/phpdotenv": "~1.0.6",
+    "wpackagist/advanced-custom-fields": "*",
+    "acf/options-page": "*",
+    "acf/flexible-content-field": "*",
+    "acf/repeater-field": "*"
   },
   "extra": {
     "installer-paths": {
+      "web/app/themes/roots/acf-fields/options-page/": ["acf/options-page"],
+      "web/app/themes/roots/acf-fields/flexible-content-field/": ["acf/flexible-content-field"],
+      "web/app/themes/roots/acf-fields/repeater-field/": ["acf/repeater-field"],
+      "web/app/themes/roots/acf/": ["wpackagist/advanced-custom-fields"],
       "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
