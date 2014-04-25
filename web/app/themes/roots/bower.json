@@ -24,6 +24,7 @@
     "underscore.string": null,
     "backbone": null,
     "handlebars": null,
-    "bootstrap-sass-official": null
+    "bootstrap-sass-official": null,
+    "almond": null
   }
 }

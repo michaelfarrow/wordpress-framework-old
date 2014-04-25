@@ -16,10 +16,24 @@ module.exports = function(grunt) {
         },
         uglify: {
             all: {
-                files: [{
-                    src: themeAssets + '/js/vendor/modernizr.js',
-                    dest: themeAssets + '/js/vendor/modernizr.min.js'
-                }]
+                options: {
+                    sourceMap: true
+                },
+                files: [
+                    {
+                        cwd: 
+                        src: themeAssets + '/js/vendor/modernizr.js',
+                        dest: themeAssets + '/js/vendor/modernizr.min.js'
+                    },
+                    {
+                        src: themeAssets + '/js/main.all.js',
+                        dest: themeAssets + '/js/main.all.min.js'
+                    },
+                    {
+                        src: themeAssets + '/js/main.almond.all.js',
+                        dest: themeAssets + '/js/main.almond.all.min.js'
+                    }
+                ]
             }
         },
         cssmin: {
@@ -40,7 +54,38 @@ module.exports = function(grunt) {
                         dest: themeAssets + '/js/vendor',
                         expand: true
                     },
+                    {
+                        cwd: themeLibs + '/requirejs',
+                        src: 'require.js',
+                        dest: themeAssets + '/js/vendor',
+                        expand: true
+                    },
                 ]
+            }
+        },
+        requirejs: {
+            compile: {
+                options: {
+                    optimize: 'none',
+                    findNestedDependencies: true,
+                    baseUrl: themeRoot,
+                    mainConfigFile: themeAssets + '/js/config.js',
+                    name: 'assets/js/main',
+                    out: themeAssets + '/js/main.all.js'
+                }
+            },
+            compile_almond: {
+                options: {
+                    optimize: 'none',
+                    findNestedDependencies: true,
+                    baseUrl: themeRoot,
+                    mainConfigFile: themeAssets + '/js/config.js',
+                    name: 'libs/almond/almond',
+                    include: [
+                        'assets/js/main'
+                    ],
+                    out: themeAssets + '/js/main.almond.all.js'
+                }
             }
         },
         watch: {
@@ -56,8 +101,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-requirejs');
 
     grunt.registerTask('default', 'compass');
     grunt.registerTask('styles', ['compass', 'cssmin']);
-    grunt.registerTask('build', ['compass', 'copy', 'cssmin', 'uglify']);
+    grunt.registerTask('build', ['compass', 'copy', 'cssmin', 'requirejs', 'uglify']);
 };
