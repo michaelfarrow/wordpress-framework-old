@@ -1,3 +1,7 @@
+var themeRoot   = 'web/app/themes/roots',
+    themeAssets = themeRoot + '/assets',
+    themeLibs   = themeRoot + '/libs';
+
 module.exports = function(grunt) {
 
     grunt.initConfig({
@@ -5,26 +9,44 @@ module.exports = function(grunt) {
         compass: {
             dist: {
                 options: {
-                    sassDir: 'web/app/themes/roots/assets/sass',
-                    cssDir: 'web/app/themes/roots/assets/css'
+                    sassDir: themeAssets + '/sass',
+                    cssDir: themeAssets + '/css'
                 }
             }
         },
-        // uglify: {
-        //     all: {
-        //         files: {
-        //             'public/js/config.min.js': ['public-compiled/js/config.js'],
-        //             'public/js/main.min.js': ['public-compiled/js/main.js']
-        //         }
-        //     }
-        // },
+        uglify: {
+            all: {
+                files: [{
+                    src: themeAssets + '/js/vendor/modernizr.js',
+                    dest: themeAssets + '/js/vendor/modernizr.min.js'
+                }]
+            }
+        },
         cssmin: {
             minify: {
                 expand: true,
-                cwd: 'web/app/themes/roots/assets/css',
+                cwd: themeAssets + '/css',
                 src: ['*.css', '!*.min.css'],
-                dest: 'web/app/themes/roots/assets/css',
+                dest: themeAssets + '/css',
                 ext: '.min.css'
+            }
+        },
+        copy: {
+            all: {
+                files: [
+                    {
+                        cwd: themeLibs + '/modernizr',
+                        src: 'modernizr.js',
+                        dest: themeAssets + '/js/vendor',
+                        expand: true
+                    },
+                ]
+            }
+        },
+        watch: {
+            all: {
+                files: [ themeAssets + '/sass/*.scss' ],
+                tasks: [ 'styles' ]
             }
         }
     });
@@ -32,7 +54,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.registerTask('default', 'compass');
-    grunt.registerTask('build', ['compass', 'cssmin']);
+    grunt.registerTask('styles', ['compass', 'cssmin']);
+    grunt.registerTask('build', ['compass', 'copy', 'cssmin', 'uglify']);
 };

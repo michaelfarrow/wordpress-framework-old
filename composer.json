@@ -31,8 +31,10 @@
     "psr-0": {"Bedrock\\Installer": "scripts"}
   },
   "scripts": {
+    "post-install-cmd": ["cd web/app/themes/roots; composer install"],
     "post-install-cmd": ["cd web/app/themes/roots; bower install"],
     "post-install-cmd": ["Bedrock\\Installer::addSalts"],
+    "post-update-cmd": ["cd web/app/themes/roots; composer update"],
     "post-update-cmd": ["cd web/app/themes/roots; bower install"]
   },
   "repositories": [
