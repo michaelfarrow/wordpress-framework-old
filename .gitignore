@@ -31,7 +31,6 @@ node_modules
 bin
 .vagrant
 
-composer.lock
 /.sass-cache
 /public/app/themes/roots/libs
 /public/app/themes/roots/acf
