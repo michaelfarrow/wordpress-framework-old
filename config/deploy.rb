@@ -28,7 +28,7 @@ set :to_rename, [
 ]
 
 set :to_delete, [
-  # 'public/js/main.combined.js',
+  'public/app/uploads',
 ]
 
 set :to_upload, [
@@ -40,7 +40,7 @@ set :shared_dirs, [
 ]
 
 set :to_link, [
-  [ 'uploads', 'public/app/uploads' ],
+  [ 'uploads', 'public/app/' ],
   [ '.env', '.env' ],
 ]
 
@@ -81,7 +81,7 @@ namespace :setup do
 	task :delete do
 		on roles(:all) do
 			fetch(:to_delete).each do |delete|
-				execute "cd #{release_path} && rm #{delete}"
+				execute "cd #{release_path} && rm -r #{delete}"
 			end
 		end
 	end
