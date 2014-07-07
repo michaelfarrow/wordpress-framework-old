@@ -17,3 +17,5 @@ require_once locate_template('/lib/widgets.php');         // Sidebars and widget
 require_once locate_template('/lib/scripts.php');         // Scripts and stylesheets
 require_once locate_template('/lib/fields.php');          // Advanced Custom Fields
 require_once locate_template('/lib/custom.php');          // Custom functions
+require_once locate_template('/lib/custom-post-type.php');// Custom post type
+require_once locate_template('/lib/custom-post-types.php');// Custom post types

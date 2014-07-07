@@ -1,7 +1,9 @@
 <?php
 
-// Uncomment once you've imported all fields to hide ACF from admins
-// define( 'ACF_LITE' , true );
+if(!WP_DEBUG) {
+    define( 'ACF_LITE' , true );
+}
+
 include_once(__DIR__.'/../acf/acf.php' );
 include_once(__DIR__.'/../acf-fields/options-page/acf-options-page.php' );
 include_once(__DIR__.'/../acf-fields/flexible-content-field/acf-flexible-content.php' );

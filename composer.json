@@ -31,11 +31,11 @@
     "psr-0": {"Bedrock\\Installer": "scripts"}
   },
   "scripts": {
-    "post-install-cmd": ["cd web/app/themes/roots; composer install"],
-    "post-install-cmd": ["cd web/app/themes/roots; bower install"],
+    "post-install-cmd": ["cd public/app/themes/roots; composer install"],
+    "post-install-cmd": ["cd public/app/themes/roots; bower install"],
     "post-install-cmd": ["Bedrock\\Installer::addSalts"],
-    "post-update-cmd": ["cd web/app/themes/roots; composer update"],
-    "post-update-cmd": ["cd web/app/themes/roots; bower install"]
+    "post-update-cmd": ["cd public/app/themes/roots; composer update"],
+    "post-update-cmd": ["cd public/app/themes/roots; bower install"]
   },
   "repositories": [
     {
@@ -46,11 +46,11 @@
       "type": "package",
       "package": {
         "name": "wordpress/wordpress",
-        "version": "3.9",
+        "version": "3.9.1",
         "type": "webroot",
         "dist": {
           "type": "zip",
-          "url": "https://wordpress.org/wordpress-3.9.zip"
+          "url": "https://wordpress.org/wordpress-3.9.1.zip"
         },
         "require" : {
           "fancyguy/webroot-installer": "1.1.0"
@@ -108,7 +108,7 @@
   ],
   "require": {
     "php": ">=5.3.2",
-    "wordpress/wordpress": "3.9",
+    "wordpress/wordpress": "3.9.1",
     "fancyguy/webroot-installer": "1.1.0",
     "composer/installers": "v1.0.12",
     "vlucas/phpdotenv": "~1.0.6",
@@ -119,15 +119,15 @@
   },
   "extra": {
     "installer-paths": {
-      "web/app/themes/roots/acf-fields/options-page/": ["acf/options-page"],
-      "web/app/themes/roots/acf-fields/flexible-content-field/": ["acf/flexible-content-field"],
-      "web/app/themes/roots/acf-fields/repeater-field/": ["acf/repeater-field"],
-      "web/app/themes/roots/acf/": ["wpackagist/advanced-custom-fields"],
-      "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
-      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
-      "web/app/themes/{$name}/": ["type:wordpress-theme"]
+      "public/app/themes/roots/acf-fields/options-page/": ["acf/options-page"],
+      "public/app/themes/roots/acf-fields/flexible-content-field/": ["acf/flexible-content-field"],
+      "public/app/themes/roots/acf-fields/repeater-field/": ["acf/repeater-field"],
+      "public/app/themes/roots/acf/": ["wpackagist/advanced-custom-fields"],
+      "public/app/plugins/{$name}/": ["type:wordpress-plugin"],
+      "public/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "public/app/themes/{$name}/": ["type:wordpress-theme"]
     },
-    "webroot-dir": "web/wp",
+    "webroot-dir": "public/wp",
     "webroot-package": "wordpress/wordpress"
   }
 }
