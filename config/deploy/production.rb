@@ -20,5 +20,5 @@ server 'example.com', user: 'deploy', roles: %w{web app db}
 #    auth_methods: %w(password)
 #  }
 
-fetch(:default_env).merge!(wp_env: :production)
+# fetch(:default_env).merge!(wp_env: :production)
 

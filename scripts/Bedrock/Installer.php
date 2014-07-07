@@ -20,6 +20,11 @@ class Installer {
     $root = dirname(dirname(__DIR__));
     $composer = $event->getComposer();
     $io = $event->getIO();
+    $env_file = "{$root}/.env";
+
+    if(file_exists($env_file)) {
+      return 1;
+    }
 
     if (!$io->isInteractive()) {
       $generate_salts = $composer->getConfig()->get('generate-salts');
@@ -35,7 +40,6 @@ class Installer {
       return sprintf("%s='%s'", $key, Installer::generate_salt());
     }, self::$KEYS);
 
-    $env_file = "{$root}/.env";
 
     if (copy("{$root}/.env.example", $env_file)) {
       file_put_contents($env_file, implode($salts, "\n"), FILE_APPEND | LOCK_EX);

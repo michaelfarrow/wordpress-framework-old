@@ -14,7 +14,7 @@ set :branch, :master
 
 set :deploy_to, "/var/www/vhosts/#{fetch(:application)}"
 
-set :log_level, :info
+# set :log_level, :info
 
 set :file_permissions_paths, [
   'public/app/uploads',
@@ -32,7 +32,7 @@ set :to_delete, [
 ]
 
 set :to_upload, [
-  '.env',
+  # '.env',
 ]
 
 set :shared_dirs, [
@@ -45,22 +45,6 @@ set :to_link, [
 ]
 
 namespace :setup do
-
-	task :migrate do
-		on roles(:all) do
-			within release_path do
-				execute "cd #{release_path} && php artisan migrate"
-			end
-		end
-	end
-
-	task :seed do
-		on roles(:all) do
-			within release_path do
-				execute "cd #{release_path} && php artisan db:seed"
-			end
-		end
-	end
 
 	task :shared do
 		on roles(:all) do
@@ -102,9 +86,16 @@ namespace :setup do
 		end
 	end
 
+	task :composer do
+		on roles(:all) do
+			execute "cd #{release_path} && composer install --no-dev --prefer-dist --no-interaction --quiet --optimize-autoloader"
+		end
+	end
+
 	after "deploy:updating", "setup:upload"
 	after "deploy:updating", "setup:shared"
 	after "deploy:updating", "setup:rename"
 	after "deploy:updating", "setup:delete"
 	after "deploy:updating", "setup:link"
+	after "deploy:updating", "setup:composer"
 end

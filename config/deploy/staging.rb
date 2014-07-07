@@ -20,5 +20,5 @@ server 'aesopstaging.com', user: 'mikefarrow', roles: %w{web app db}
 #    auth_methods: %w(password)
 #  }
 
-fetch(:default_env).merge!(wp_env: :staging)
+# fetch(:default_env).merge!(wp_env: :staging)
 
