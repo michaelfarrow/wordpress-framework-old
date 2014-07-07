@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "09be010f5b49c3b6ad0f93431fd0fd72",
+    "hash": "73809fa071c3bac3fd7813fdfd197ac5",
     "packages": [
         {
             "name": "acf/flexible-content-field",
@@ -225,6 +225,17 @@
             "time": "2014-01-31 16:18:39"
         },
         {
+            "name": "weyforth/wordpress-themecommon",
+            "version": "1.3",
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/weyforth/wordpress-themecommon/get/ade9b1e138cf.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "wordpress-plugin"
+        },
+        {
             "name": "wordpress/wordpress",
             "version": "3.9.1",
             "dist": {
@@ -240,7 +251,7 @@
         },
         {
             "name": "wpackagist/advanced-custom-fields",
-            "version": "4.3.8",
+            "version": "dev-trunk",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/advanced-custom-fields/",
@@ -256,7 +267,8 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "http://wordpress.org/plugins/advanced-custom-fields/"
+            "homepage": "http://wordpress.org/plugins/advanced-custom-fields/",
+            "time": "2014-05-05 05:16:34"
         }
     ],
     "packages-dev": [
@@ -265,7 +277,7 @@
     "aliases": [
 
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": [
 
     ],

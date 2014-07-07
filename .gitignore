@@ -1,3 +1,6 @@
+.DS_Store
+._.*
+
 # WordPress
 public/wp
 
@@ -35,3 +38,4 @@ bin
 /public/app/themes/roots/libs
 /public/app/themes/roots/acf
 /public/app/themes/roots/acf-fields
+/public/app/themes/roots/common
