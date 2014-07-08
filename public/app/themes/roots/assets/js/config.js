@@ -12,6 +12,7 @@ requirejs.config({
         underscore: 'libs/underscore/underscore',
         jquery: 'libs/jquery/dist/jquery',
         backbone: 'libs/backbone/backbone',
+        fastclick: 'libs/fastclick/lib/fastclick'
     },
     shim: {
         

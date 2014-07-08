@@ -1,4 +1,4 @@
-var themeRoot   = 'web/app/themes/roots',
+var themeRoot   = 'public/app/themes/roots',
     themeAssets = themeRoot + '/assets',
     themeLibs   = themeRoot + '/libs';
 
@@ -21,7 +21,6 @@ module.exports = function(grunt) {
                 },
                 files: [
                     {
-                        cwd: 
                         src: themeAssets + '/js/vendor/modernizr.js',
                         dest: themeAssets + '/js/vendor/modernizr.min.js'
                     },
