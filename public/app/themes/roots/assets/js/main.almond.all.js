@@ -11558,7 +11558,7 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
 
 require(["config"], function() {
 
-        require(["jquery", "fastclick"], function($, Fastclick) {
+        require(["jquery", "fastclick"], function($, FastClick) {
 
             // Use this variable to set up the common and page specific functions. If you 
             // rename this variable, you will also need to rename the namespace below.
