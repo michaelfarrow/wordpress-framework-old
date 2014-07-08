@@ -11143,6 +11143,7 @@ require(["config"], function() {
                 common: {
                     init: function() {
                         // JavaScript to be fired on all pages
+                        FastClick.attach(document.body);
                     }
                 },
                 // Home page
