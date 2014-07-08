@@ -2,5 +2,8 @@
 /**
  * Roots includes
  */
-require_once locate_template('/common/all.php');             // Utility functions
-require_once locate_template('/custom-post-types.php');             // Utility functions
+
+require_once locate_template('lib/config.php');
+require_once locate_template('common/all.php');
+require_once locate_template('lib/custom-post-types.php');
+require_once locate_template('lib/fields.php');
