@@ -21,10 +21,10 @@ set :file_permissions_paths, [
 ]
 
 set :to_rename, [
-#   [ 'public/js/vendor/require.min.js', 'public/js/vendor/require.js' ],
-#   [ 'public/js/vendor/modernizr.min.js', 'public/js/vendor/modernizr.js' ],
-#   [ 'public/js/main.combined.min.js', 'public/js/main.js' ],
-#   [ 'public/css/main.min.css', 'public/css/main.css' ],
+  [ 'public/app/themes/roots/assets/js/vendor/require.min.js', 'public/app/themes/roots/assets/js/vendor/require.js' ],
+  [ 'public/app/themes/roots/assets/js/vendor/modernizr.min.js', 'public/app/themes/roots/assets/js/vendor/modernizr.js' ],
+  [ 'public/app/themes/roots/assets/js/main.all.min.js', 'public/app/themes/roots/assets/js/main.js' ],
+  [ 'public/app/themes/roots/assets/css/main.min.css', 'public/app/themes/roots/assets/css/main.css' ],
 ]
 
 set :to_delete, [
