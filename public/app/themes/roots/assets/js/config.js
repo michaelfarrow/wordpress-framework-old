@@ -7,6 +7,7 @@ requirejs.config({
         views: 'assets/js/views',
         common: 'assets/js/common',
         config: 'assets/js/config',
+        async:'libs/requirejs-plugins/src/async',
         handlebars: 'libs/handlebars/handlebars.amd',
         'underscore.string': 'libs/underscore.string/lib/underscore.string',
         underscore: 'libs/underscore/underscore',

@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "requirejs": null,
+    "requirejs-plugins": null,
     "cookies-js": "*",
     "jquery": "1.*",
     "jquery-ui": "*",

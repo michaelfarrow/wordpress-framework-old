@@ -19,6 +19,24 @@ require(["config"], function() {
                     init: function() {
                         // JavaScript to be fired on all pages
                         FastClick.attach(document.body);
+
+                        // Google maps async loading
+
+                        // require(['async!http://maps.google.com/maps/api/js?sensor=false'], function(){
+                        //     var $map = $('#gmap').css({
+                        //         width: 500,
+                        //         height: 400
+                        //     }),
+                        //         data = google_map_data_var;
+
+                        //     if(data.center && typeof data.center == 'object'){
+                        //         data.center = new google.maps.LatLng(data.center.lat, data.center.lng)
+                        //     }
+
+                        //     data.zoom = 16;
+
+                        //     var map = new google.maps.Map($map.get(0), data); 
+                        // });
                     }
                 },
                 // Home page
