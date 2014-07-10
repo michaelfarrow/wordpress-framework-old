@@ -109,11 +109,11 @@
       "type": "package",
       "package": {
         "name": "weyforth/wordpress-themecommon",
-        "version": "1.5",
+        "version": "1.6",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
-          "url": "https://bitbucket.org/weyforth/wordpress-themecommon/get/da205bbc5a9b.zip"
+          "url": "https://bitbucket.org/weyforth/wordpress-themecommon/get/926b8d9333b5.zip"
         }
       }
     }

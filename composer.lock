@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ce43855fb4a8c10d082cf1f37bee7081",
+    "hash": "1ce57a9dc71fed1b6357957db3cf29f5",
     "packages": [
         {
             "name": "acf/flexible-content-field",
@@ -226,10 +226,10 @@
         },
         {
             "name": "weyforth/wordpress-themecommon",
-            "version": "1.5",
+            "version": "1.6",
             "dist": {
                 "type": "zip",
-                "url": "https://bitbucket.org/weyforth/wordpress-themecommon/get/da205bbc5a9b.zip",
+                "url": "https://bitbucket.org/weyforth/wordpress-themecommon/get/926b8d9333b5.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -272,7 +272,27 @@
         }
     ],
     "packages-dev": [
-
+        {
+            "name": "wpackagist/ajax-thumbnail-rebuild",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/ajax-thumbnail-rebuild/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/ajax-thumbnail-rebuild.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "http://wordpress.org/plugins/ajax-thumbnail-rebuild/",
+            "time": "2014-05-04 08:45:49"
+        }
     ],
     "aliases": [
 
