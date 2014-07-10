@@ -130,6 +130,9 @@
     "acf/repeater-field": "*",
     "weyforth/wordpress-themecommon": "*"
   },
+  "require-dev": {
+    "wpackagist/ajax-thumbnail-rebuild": "*"
+  },
   "extra": {
     "installer-paths": {
       "public/app/themes/roots/acf-fields/options-page/": ["acf/options-page"],
