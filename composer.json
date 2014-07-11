@@ -131,7 +131,8 @@
     "weyforth/wordpress-themecommon": "*"
   },
   "require-dev": {
-    "wpackagist/ajax-thumbnail-rebuild": "*"
+    "wpackagist/ajax-thumbnail-rebuild": "*",
+    "wpackagist/wordpress-importer": "*"
   },
   "extra": {
     "installer-paths": {
