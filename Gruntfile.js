@@ -27,10 +27,6 @@ module.exports = function(grunt) {
                     {
                         src: themeAssets + '/js/main.all.js',
                         dest: themeAssets + '/js/main.all.min.js'
-                    },
-                    {
-                        src: themeAssets + '/js/main.almond.all.js',
-                        dest: themeAssets + '/js/main.almond.all.min.js'
                     }
                 ]
             }
@@ -71,19 +67,6 @@ module.exports = function(grunt) {
                     mainConfigFile: themeAssets + '/js/config.js',
                     name: 'assets/js/main',
                     out: themeAssets + '/js/main.all.js'
-                }
-            },
-            compile_almond: {
-                options: {
-                    optimize: 'none',
-                    findNestedDependencies: true,
-                    baseUrl: themeRoot,
-                    mainConfigFile: themeAssets + '/js/config.js',
-                    name: 'libs/almond/almond',
-                    include: [
-                        'assets/js/main'
-                    ],
-                    out: themeAssets + '/js/main.almond.all.js'
                 }
             }
         },
