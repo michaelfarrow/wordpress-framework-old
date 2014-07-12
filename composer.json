@@ -132,7 +132,8 @@
   },
   "require-dev": {
     "wpackagist/ajax-thumbnail-rebuild": "*",
-    "wpackagist/wordpress-importer": "*"
+    "wpackagist/wordpress-importer": "*",
+    "wpackagist/rewrite-rules-inspector": "*"
   },
   "extra": {
     "installer-paths": {
