@@ -26,6 +26,7 @@
     "backbone": null,
     "handlebars": null,
     "bootstrap-sass-official": null,
-    "fastclick": null
+    "fastclick": null,
+    "normalize.scss": null
   }
 }
