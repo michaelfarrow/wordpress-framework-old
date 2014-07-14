@@ -8051,9 +8051,13 @@ button.close {
   position: relative;
   padding-top: 56.25%;
   width: 100%;
+  overflow: hidden;
+  height: auto;
 }
-/* line 19, ../../common/assets/sass/common.scss */
-.entry-content-asset iframe {
+/* line 23, ../../common/assets/sass/common.scss */
+.entry-content-asset iframe,
+.entry-content-asset object,
+.entry-content-asset embed {
   position: absolute;
   top: 0;
   left: 0;

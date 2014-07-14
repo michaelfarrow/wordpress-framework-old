@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8a2795d447a10368923087f9195eeb9d",
+    "hash": "5929c9a8a0eccc4c23c08380db70d4f5",
     "packages": [
         {
             "name": "acf/flexible-content-field",
@@ -226,10 +226,10 @@
         },
         {
             "name": "weyforth/wordpress-themecommon",
-            "version": "1.7",
+            "version": "1.8",
             "dist": {
                 "type": "zip",
-                "url": "https://bitbucket.org/weyforth/wordpress-themecommon/get/0a62f0574c03.zip",
+                "url": "https://bitbucket.org/weyforth/wordpress-themecommon/get/68f85387f2bf.zip",
                 "reference": null,
                 "shasum": null
             },
