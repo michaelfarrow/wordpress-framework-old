@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1ce57a9dc71fed1b6357957db3cf29f5",
+    "hash": "8a2795d447a10368923087f9195eeb9d",
     "packages": [
         {
             "name": "acf/flexible-content-field",
@@ -226,10 +226,10 @@
         },
         {
             "name": "weyforth/wordpress-themecommon",
-            "version": "1.6",
+            "version": "1.7",
             "dist": {
                 "type": "zip",
-                "url": "https://bitbucket.org/weyforth/wordpress-themecommon/get/926b8d9333b5.zip",
+                "url": "https://bitbucket.org/weyforth/wordpress-themecommon/get/0a62f0574c03.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -292,6 +292,48 @@
             "type": "wordpress-plugin",
             "homepage": "http://wordpress.org/plugins/ajax-thumbnail-rebuild/",
             "time": "2014-05-04 08:45:49"
+        },
+        {
+            "name": "wpackagist/rewrite-rules-inspector",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/rewrite-rules-inspector/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/rewrite-rules-inspector.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "http://wordpress.org/plugins/rewrite-rules-inspector/",
+            "time": "2013-09-24 16:23:25"
+        },
+        {
+            "name": "wpackagist/wordpress-importer",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/wordpress-importer/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/wordpress-importer.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "http://wordpress.org/plugins/wordpress-importer/",
+            "time": "2014-01-14 20:31:13"
         }
     ],
     "aliases": [

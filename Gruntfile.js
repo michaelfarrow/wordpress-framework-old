@@ -17,7 +17,7 @@ module.exports = function(grunt) {
         uglify: {
             all: {
                 options: {
-                    sourceMap: true
+                    sourceMap: false
                 },
                 files: [
                     {
