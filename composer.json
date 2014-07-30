@@ -60,60 +60,24 @@
     {
       "type": "package",
       "package": {
-        "name": "acf/options-page",
-        "version": "1.0",
-        "type": "wordpress-plugin",
-        "dist": {
-          "type": "zip",
-          "url": "http://download.advancedcustomfields.com/OPN8-FA4J-Y2LW-81LS/trunk/"
-        },
-        "require" : {
-          "fancyguy/webroot-installer": "1.1.0",
-          "wpackagist/advanced-custom-fields": "*"
-        }
-      }
-    },
-    {
-      "type": "package",
-      "package": {
-        "name": "acf/flexible-content-field",
-        "version": "1.0",
-        "type": "wordpress-plugin",
-        "dist": {
-          "type": "zip",
-          "url": "http://download.advancedcustomfields.com/FC9O-H6VN-E4CL-LT33/trunk/"
-        },
-        "require" : {
-          "fancyguy/webroot-installer": "1.1.0",
-          "wpackagist/advanced-custom-fields": "*"
-        }
-      }
-    },
-    {
-      "type": "package",
-      "package": {
-        "name": "acf/repeater-field",
-        "version": "1.0",
-        "type": "wordpress-plugin",
-        "dist": {
-          "type": "zip",
-          "url": "http://download.advancedcustomfields.com/QJF7-L4IX-UCNP-RF2W/trunk/"
-        },
-        "require" : {
-          "fancyguy/webroot-installer": "1.1.0",
-          "wpackagist/advanced-custom-fields": "*"
-        }
-      }
-    },
-    {
-      "type": "package",
-      "package": {
         "name": "weyforth/wordpress-themecommon",
-        "version": "1.8",
+        "version": "2.5",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
-          "url": "https://bitbucket.org/weyforth/wordpress-themecommon/get/68f85387f2bf.zip"
+          "url": "https://bitbucket.org/weyforth/wordpress-themecommon/get/797f95c094e8.zip"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "acf-u/advanced-custom-fields",
+        "version": "5.0",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "http://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=b3JkZXJfaWQ9MzQ4NTl8dHlwZT1kZXZlbG9wZXJ8ZGF0ZT0yMDE0LTA3LTE1IDE2OjI5OjUw"
         }
       }
     }
@@ -124,11 +88,12 @@
     "fancyguy/webroot-installer": "1.1.0",
     "composer/installers": "v1.0.12",
     "vlucas/phpdotenv": "~1.0.6",
-    "wpackagist/advanced-custom-fields": "*",
-    "acf/options-page": "*",
-    "acf/flexible-content-field": "*",
-    "acf/repeater-field": "*",
-    "weyforth/wordpress-themecommon": "*"
+    "acf-u/advanced-custom-fields": "5.*",
+    "wpackagist/akismet": "*",
+    "weyforth/wordpress-themecommon": "*",
+    "wpackagist/w3-total-cache": "*",
+    "gregwar/cache": "*",
+    "wukka/nonce": "*"
   },
   "require-dev": {
     "wpackagist/ajax-thumbnail-rebuild": "*",
@@ -137,11 +102,8 @@
   },
   "extra": {
     "installer-paths": {
-      "public/app/themes/roots/acf-fields/options-page/": ["acf/options-page"],
-      "public/app/themes/roots/acf-fields/flexible-content-field/": ["acf/flexible-content-field"],
-      "public/app/themes/roots/acf-fields/repeater-field/": ["acf/repeater-field"],
       "public/app/themes/roots/common/": ["weyforth/wordpress-themecommon"],
-      "public/app/themes/roots/acf/": ["wpackagist/advanced-custom-fields"],
+      "public/app/themes/roots/acf/": ["acf-u/advanced-custom-fields"],
       "public/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "public/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
       "public/app/themes/{$name}/": ["type:wordpress-theme"]

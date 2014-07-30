@@ -4,50 +4,16 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5929c9a8a0eccc4c23c08380db70d4f5",
+    "hash": "e55650684597bd574386b9109549f8c6",
     "packages": [
         {
-            "name": "acf/flexible-content-field",
-            "version": "1.0",
+            "name": "acf-u/advanced-custom-fields",
+            "version": "5.0",
             "dist": {
                 "type": "zip",
-                "url": "http://download.advancedcustomfields.com/FC9O-H6VN-E4CL-LT33/trunk/",
+                "url": "http://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=b3JkZXJfaWQ9MzQ4NTl8dHlwZT1kZXZlbG9wZXJ8ZGF0ZT0yMDE0LTA3LTE1IDE2OjI5OjUw",
                 "reference": null,
                 "shasum": null
-            },
-            "require": {
-                "fancyguy/webroot-installer": "1.1.0",
-                "wpackagist/advanced-custom-fields": "*"
-            },
-            "type": "wordpress-plugin"
-        },
-        {
-            "name": "acf/options-page",
-            "version": "1.0",
-            "dist": {
-                "type": "zip",
-                "url": "http://download.advancedcustomfields.com/OPN8-FA4J-Y2LW-81LS/trunk/",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "fancyguy/webroot-installer": "1.1.0",
-                "wpackagist/advanced-custom-fields": "*"
-            },
-            "type": "wordpress-plugin"
-        },
-        {
-            "name": "acf/repeater-field",
-            "version": "1.0",
-            "dist": {
-                "type": "zip",
-                "url": "http://download.advancedcustomfields.com/QJF7-L4IX-UCNP-RF2W/trunk/",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "fancyguy/webroot-installer": "1.1.0",
-                "wpackagist/advanced-custom-fields": "*"
             },
             "type": "wordpress-plugin"
         },
@@ -178,6 +144,50 @@
             "time": "2013-03-15 17:51:14"
         },
         {
+            "name": "gregwar/cache",
+            "version": "dev-master",
+            "target-dir": "Gregwar/Cache",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Gregwar/Cache.git",
+                "reference": "12a948710deee077039bce74ce053df3a8147a84"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Gregwar/Cache/zipball/12a948710deee077039bce74ce053df3a8147a84",
+                "reference": "12a948710deee077039bce74ce053df3a8147a84",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Gregwar\\Cache": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Grégoire Passault",
+                    "email": "g.passault@gmail.com",
+                    "homepage": "http://www.gregwar.com/"
+                }
+            ],
+            "description": "A lightweight file-system cache system",
+            "keywords": [
+                "cache",
+                "caching",
+                "file-system",
+                "system"
+            ],
+            "time": "2014-07-15 11:12:36"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "1.0.6",
             "source": {
@@ -226,10 +236,10 @@
         },
         {
             "name": "weyforth/wordpress-themecommon",
-            "version": "1.8",
+            "version": "2.5",
             "dist": {
                 "type": "zip",
-                "url": "https://bitbucket.org/weyforth/wordpress-themecommon/get/68f85387f2bf.zip",
+                "url": "https://bitbucket.org/weyforth/wordpress-themecommon/get/797f95c094e8.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -250,16 +260,16 @@
             "type": "webroot"
         },
         {
-            "name": "wpackagist/advanced-custom-fields",
+            "name": "wpackagist/akismet",
             "version": "dev-trunk",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/advanced-custom-fields/",
+                "url": "http://plugins.svn.wordpress.org/akismet/",
                 "reference": "trunk"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/advanced-custom-fields.zip",
+                "url": "http://downloads.wordpress.org/plugin/akismet.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -267,8 +277,70 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "http://wordpress.org/plugins/advanced-custom-fields/",
-            "time": "2014-05-05 05:16:34"
+            "homepage": "http://wordpress.org/plugins/akismet/",
+            "time": "2014-07-11 05:18:55"
+        },
+        {
+            "name": "wpackagist/w3-total-cache",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/w3-total-cache/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/w3-total-cache.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "http://wordpress.org/plugins/w3-total-cache/",
+            "time": "2014-04-04 01:42:00"
+        },
+        {
+            "name": "wukka/nonce",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wukka/Nonce.git",
+                "reference": "07b82de6a9be0e98eaf640573c95ef586378be4d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wukka/Nonce/zipball/07b82de6a9be0e98eaf640573c95ef586378be4d",
+                "reference": "07b82de6a9be0e98eaf640573c95ef586378be4d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "wukka/test": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Wukka\\Nonce": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "John Loehrer",
+                    "email": "72squared@gmail.com",
+                    "homepage": "http://www.linkedin.com/pub/john-loehrer/10/439/9b6",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Nonce - token generator to prevent unauthorized access.",
+            "time": "2013-08-06 17:01:08"
         }
     ],
     "packages-dev": [

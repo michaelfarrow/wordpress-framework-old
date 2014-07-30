@@ -39,3 +39,5 @@ bin
 /public/app/themes/roots/acf
 /public/app/themes/roots/acf-fields
 /public/app/themes/roots/common
+/public/app/cache/
+/public/app/w3tc-config/

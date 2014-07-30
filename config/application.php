@@ -31,6 +31,12 @@ define('WP_CONTENT_DIR', $webroot_dir . CONTENT_DIR);
 define('WP_CONTENT_URL', WP_HOME . CONTENT_DIR);
 
 /**
+ * Dynamic Caching
+ */
+
+define('W3TC_DYNAMIC_SECURITY', getenv('NONCE_KEY'));
+
+/**
  * DB settings
  */
 define('DB_CHARSET', 'utf8');
@@ -70,3 +76,27 @@ define('DISALLOW_FILE_EDIT', true);
 if (!defined('ABSPATH')) {
   define('ABSPATH', $webroot_dir . '/wp/');
 }
+
+/**
+ * Custom Nonce Generation/Verification
+ */
+
+use Wukka\Nonce;
+
+if ( !function_exists('wp_create_nonce') ) :
+
+	function wp_create_nonce($action = -1) {
+		$nonce = new Nonce(NONCE_KEY.NONCE_SALT);
+		return $nonce->create($action);
+	}
+
+endif;
+
+if ( !function_exists('wp_verify_nonce') ) :
+
+	function wp_verify_nonce($nonce, $action = -1) {
+		$nonce_check = new Nonce(NONCE_KEY.NONCE_SALT);
+		return $nonce_check->check($nonce, $action);
+	}
+
+endif;

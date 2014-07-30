@@ -6,6 +6,20 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        modernizr: {
+            dist: {
+                devFile: themeLibs + '/modernizr/modernizr.js',
+                outputFile: themeAssets + '/js/vendor/modernizr.js',
+                files : {
+                    src: [
+                        themeAssets + '/sass/*.scss',
+                        themeAssets + '/js/*.js',
+                        themeRoot + '/common/assets/scss/*.scss'
+                    ]
+                },
+                matchCommunityTests: true
+            }
+        },
         compass: {
             dist: {
                 options: {
@@ -20,10 +34,6 @@ module.exports = function(grunt) {
                     sourceMap: false
                 },
                 files: [
-                    {
-                        src: themeAssets + '/js/vendor/modernizr.js',
-                        dest: themeAssets + '/js/vendor/modernizr.min.js'
-                    },
                     {
                         src: themeAssets + '/js/main.all.js',
                         dest: themeAssets + '/js/main.all.min.js'
@@ -43,12 +53,6 @@ module.exports = function(grunt) {
         copy: {
             all: {
                 files: [
-                    {
-                        cwd: themeLibs + '/modernizr',
-                        src: 'modernizr.js',
-                        dest: themeAssets + '/js/vendor',
-                        expand: true
-                    },
                     {
                         cwd: themeLibs + '/requirejs',
                         src: 'require.js',
@@ -84,8 +88,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-requirejs');
+    grunt.loadNpmTasks("grunt-modernizr");
 
     grunt.registerTask('default', 'compass');
     grunt.registerTask('styles', ['compass', 'cssmin']);
-    grunt.registerTask('build', ['compass', 'copy', 'cssmin', 'requirejs', 'uglify']);
+    grunt.registerTask('build', ['compass', 'copy', 'cssmin', 'requirejs', 'uglify', 'modernizr']);
 };
