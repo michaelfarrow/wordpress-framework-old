@@ -1,6 +1,8 @@
 set :application, 'wordpress-fw'
 set :repo_url, 'git@bitbucket.org:weyforth/wordpress-framework.git'
 
+set :cache_flush_key, 'o4YcWNdL1n1FAYLWGA2mze0HkTKHttTWgkbwRmSr'
+
 # Branch options
 # Prompts for the branch name (defaults to current branch)
 #ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }

@@ -11213,7 +11213,7 @@ require(["config"], function() {
                 }
             };
 
-            $(document).ready(UTIL.loadEvents);
+            Router.loadEvents();
 
         });
 
