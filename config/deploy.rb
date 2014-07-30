@@ -18,12 +18,14 @@ set :deploy_to, "/var/www/vhosts/#{fetch(:application)}"
 
 set :file_permissions_paths, [
   'public/app/uploads',
+  'public/app/cached',
 ]
 
 set :to_rename, [
   [ 'public/app/themes/roots/assets/js/vendor/require.min.js', 'public/app/themes/roots/assets/js/vendor/require.js' ],
   [ 'public/app/themes/roots/assets/js/main.all.min.js', 'public/app/themes/roots/assets/js/main.js' ],
   [ 'public/app/themes/roots/assets/css/main.min.css', 'public/app/themes/roots/assets/css/main.css' ],
+  [ 'public/app/themes/roots/w3tc/w3tc-wp-loader.php', 'public/app/plugins/w3tc-wp-loader.php' ],
 ]
 
 set :to_delete, [
@@ -36,11 +38,17 @@ set :to_upload, [
 
 set :shared_dirs, [
   'uploads',
+  'cache',
+  'w3tc-config',
 ]
 
 set :to_link, [
   [ 'uploads', 'public/app/' ],
+  [ 'cache' , 'public/app/' ],
+  [ 'w3tc-config', 'public/app/w3tc-config'],
   [ '.env', '.env' ],
+  [ 'advanced-cache.php', 'public/app/advanced-cache.php' ],
+  [ 'db.php', 'public/app/db.php' ],
 ]
 
 namespace :setup do
@@ -91,10 +99,17 @@ namespace :setup do
 		end
 	end
 
+	task :flushcache do
+		on roles(:all) do
+			execute "curl 'http://#{host.hostname}?cache_flush_key=#{fetch(:cache_flush_key)}&rev=#{release_timestamp}' >/dev/null 2>&1"
+		end
+	end
+
 	after "deploy:updating", "setup:upload"
 	after "deploy:updating", "setup:shared"
 	after "deploy:updating", "setup:rename"
 	after "deploy:updating", "setup:delete"
 	after "deploy:updating", "setup:link"
 	after "deploy:updating", "setup:composer"
+	after "deploy:updating", "setup:flushcache"
 end
