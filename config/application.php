@@ -24,6 +24,11 @@ if (file_exists($env_config)) {
 }
 
 /**
+ * Cache only on producton
+ */
+define('WP_CACHE', WP_DEBUG ? false : true);
+
+/**
  * Custom Content Directory
  */
 define('CONTENT_DIR', '/app');
