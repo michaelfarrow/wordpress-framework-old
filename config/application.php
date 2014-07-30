@@ -26,7 +26,7 @@ if (file_exists($env_config)) {
 /**
  * Cache only on producton
  */
-define('WP_CACHE', WP_DEBUG ? false : true);
+define('WP_CACHE', (WP_DEBUG_DISPLAY !== false || WP_DEBUG === false) ? false : true);
 
 /**
  * Custom Content Directory
