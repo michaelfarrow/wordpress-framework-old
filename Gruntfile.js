@@ -76,8 +76,11 @@ module.exports = function(grunt) {
         },
         watch: {
             all: {
-                files: [ themeAssets + '/sass/*.scss' ],
-                tasks: [ 'styles' ]
+                files: [
+                    themeAssets + '/sass/*.scss',
+                    themeAssets + '/js/*.js',
+                ],
+                tasks: [ 'styles', 'modernizr' ]
             }
         }
     });
