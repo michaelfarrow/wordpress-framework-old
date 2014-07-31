@@ -11187,7 +11187,7 @@ require(["config"], function() {
 
             // The routing fires all common scripts, followed by the page specific scripts.
             // Add additional events for more control over timing e.g. a finalize event
-            var UTIL = {
+            var Router = {
                 fire: function(func, funcname, args) {
                     var namespace = Roots;
                     funcname = (funcname === undefined) ? 'init' : funcname;
@@ -11196,7 +11196,7 @@ require(["config"], function() {
                     }
                 },
                 loadEvents: function() {
-                    UTIL.fire('common');
+                    Router.fire('common');
 
                     $.each(document.body.className.replace(/-/g, '_').split(/\s+/),function(i,classnm) {
 
@@ -11208,7 +11208,7 @@ require(["config"], function() {
                             classnm = classnm.replace('page_template_template_', 'page_template_')
                         }
 
-                        UTIL.fire(classnm);
+                        Router.fire(classnm);
                     });
                 }
             };
