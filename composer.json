@@ -61,11 +61,11 @@
       "type": "package",
       "package": {
         "name": "weyforth/wordpress-themecommon",
-        "version": "2.8",
+        "version": "2.9",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
-          "url": "https://bitbucket.org/weyforth/wordpress-themecommon/get/34f1f36366fa.zip"
+          "url": "https://bitbucket.org/weyforth/wordpress-themecommon/get/4f50d754a281.zip"
         }
       }
     },
