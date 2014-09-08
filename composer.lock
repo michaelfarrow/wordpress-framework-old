@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "bac19387073b2d827ce50a057fc1a438",
+    "hash": "c508c6c9cecf1e00a0cf6c90b98f7e17",
     "packages": [
         {
             "name": "acf-u/advanced-custom-fields",
@@ -150,12 +150,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Gregwar/Cache.git",
-                "reference": "12a948710deee077039bce74ce053df3a8147a84"
+                "reference": "b74ede60b13cd1bdcf8c435e98cc3162258317dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Gregwar/Cache/zipball/12a948710deee077039bce74ce053df3a8147a84",
-                "reference": "12a948710deee077039bce74ce053df3a8147a84",
+                "url": "https://api.github.com/repos/Gregwar/Cache/zipball/b74ede60b13cd1bdcf8c435e98cc3162258317dc",
+                "reference": "b74ede60b13cd1bdcf8c435e98cc3162258317dc",
                 "shasum": ""
             },
             "require": {
@@ -173,9 +173,8 @@
             ],
             "authors": [
                 {
-                    "name": "Grégoire Passault",
-                    "email": "g.passault@gmail.com",
-                    "homepage": "http://www.gregwar.com/"
+                    "name": "Gregwar",
+                    "email": "g.passault@gmail.com"
                 }
             ],
             "description": "A lightweight file-system cache system",
@@ -185,7 +184,7 @@
                 "file-system",
                 "system"
             ],
-            "time": "2014-07-15 11:12:36"
+            "time": "2014-09-05 06:27:18"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -236,10 +235,10 @@
         },
         {
             "name": "weyforth/wordpress-themecommon",
-            "version": "2.9",
+            "version": "3.0",
             "dist": {
                 "type": "zip",
-                "url": "https://bitbucket.org/weyforth/wordpress-themecommon/get/4f50d754a281.zip",
+                "url": "https://bitbucket.org/weyforth/wordpress-themecommon/get/84deb97ffdb1.zip",
                 "reference": null,
                 "shasum": null
             },
