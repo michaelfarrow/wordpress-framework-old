@@ -15,47 +15,39 @@ require(["config"], function() {
             // rename this variable, you will also need to rename the namespace below.
             var Roots = {
                 // All pages
-                common: {
-                    init: function() {
-                        // JavaScript to be fired on all pages
-                        FastClick.attach(document.body);
+                common: function() {
+                    // JavaScript to be fired on all pages
+                    FastClick.attach(document.body);
 
-                        // Google maps async loading
+                    // Google maps async loading
 
-                        // require(['async!http://maps.google.com/maps/api/js?sensor=false'], function(){
-                        //     var $map = $('#gmap').css({
-                        //         width: 500,
-                        //         height: 400
-                        //     }),
-                        //         data = google_map_data_var;
+                    // require(['async!http://maps.google.com/maps/api/js?sensor=false'], function(){
+                    //     var $map = $('#gmap').css({
+                    //         width: 500,
+                    //         height: 400
+                    //     }),
+                    //         data = google_map_data_var;
 
-                        //     if(data.center && typeof data.center == 'object'){
-                        //         data.center = new google.maps.LatLng(data.center.lat, data.center.lng)
-                        //     }
+                    //     if(data.center && typeof data.center == 'object'){
+                    //         data.center = new google.maps.LatLng(data.center.lat, data.center.lng)
+                    //     }
 
-                        //     data.zoom = 16;
+                    //     data.zoom = 16;
 
-                        //     var map = new google.maps.Map($map.get(0), data); 
-                        // });
-                    }
+                    //     var map = new google.maps.Map($map.get(0), data); 
+                    // });
                 },
                 // Home page
-                home: {
-                    init: function() {
-                        // JavaScript to be fired on the home page
-                    }
+                home: function() {
+                    // JavaScript to be fired on the home page
                 },
                 // About us page, note the change from about-us to about_us.
-                about_us: {
-                    init: function() {
-                        // JavaScript to be fired on the about us page
-                    }
+                about_us: function() {
+                    // JavaScript to be fired on the about us page
                 },
                 // custom_template.
-                page_template_custom: {
-                    init: function() {
-                        // JavaScript to be fired on any page with the template 'custom-template';
-                    }
+                page_template_custom: function() {
+                    // JavaScript to be fired on any page with the template 'custom-template';
                 }
             };
 
@@ -63,10 +55,9 @@ require(["config"], function() {
             // Add additional events for more control over timing e.g. a finalize event
             var Router = {
                 fire: function(func, funcname, args) {
-                    var namespace = Roots;
-                    funcname = (funcname === undefined) ? 'init' : funcname;
-                    if (func !== '' && namespace[func] && typeof namespace[func][funcname] === 'function') {
-                        namespace[func][funcname](args);
+                    var namespace = Pages;
+                    if (func !== '' && namespace[func] && typeof namespace[func] === 'function') {
+                        namespace[func](args);
                     }
                 },
                 loadEvents: function() {
