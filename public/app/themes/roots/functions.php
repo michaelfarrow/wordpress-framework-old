@@ -1,4 +1,7 @@
 <?php
+
+use Weyforth\ThemeCommon\ThemeCommon;
+
 /**
  * Roots includes
  */
@@ -6,7 +9,7 @@
 require_once locate_template('lib/config.php');
 require_once locate_template('lib/cache.php');
 
-require_once locate_template('common/all.php');
+ThemeCommon::load();
 
 require_once locate_template('lib/fields.php');
 require_once locate_template('lib/custom-post-types.php');

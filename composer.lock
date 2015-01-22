@@ -4,11 +4,11 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c508c6c9cecf1e00a0cf6c90b98f7e17",
+    "hash": "81742cd487343dbea4da17d4367ea7d1",
     "packages": [
         {
             "name": "acf-u/advanced-custom-fields",
-            "version": "5.0",
+            "version": "5.1.6",
             "dist": {
                 "type": "zip",
                 "url": "http://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=b3JkZXJfaWQ9MzQ4NTl8dHlwZT1kZXZlbG9wZXJ8ZGF0ZT0yMDE0LTA3LTE1IDE2OjI5OjUw",
@@ -145,17 +145,17 @@
         },
         {
             "name": "gregwar/cache",
-            "version": "dev-master",
+            "version": "v1.0.10",
             "target-dir": "Gregwar/Cache",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Gregwar/Cache.git",
-                "reference": "b74ede60b13cd1bdcf8c435e98cc3162258317dc"
+                "reference": "0a1a02e4943e95f491b3d2395609247385975622"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Gregwar/Cache/zipball/b74ede60b13cd1bdcf8c435e98cc3162258317dc",
-                "reference": "b74ede60b13cd1bdcf8c435e98cc3162258317dc",
+                "url": "https://api.github.com/repos/Gregwar/Cache/zipball/0a1a02e4943e95f491b3d2395609247385975622",
+                "reference": "0a1a02e4943e95f491b3d2395609247385975622",
                 "shasum": ""
             },
             "require": {
@@ -184,29 +184,34 @@
                 "file-system",
                 "system"
             ],
-            "time": "2014-09-05 06:27:18"
+            "time": "2014-09-24 11:23:30"
         },
         {
             "name": "vlucas/phpdotenv",
-            "version": "1.0.6",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "2821c024b4c14c7e6d1ff99e063ae9532620beb2"
+                "reference": "732d2adb7d916c9593b9d58c3b0d9ebefead07aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/2821c024b4c14c7e6d1ff99e063ae9532620beb2",
-                "reference": "2821c024b4c14c7e6d1ff99e063ae9532620beb2",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/732d2adb7d916c9593b9d58c3b0d9ebefead07aa",
+                "reference": "732d2adb7d916c9593b9d58c3b0d9ebefead07aa",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2"
             },
             "require-dev": {
-                "phpunit/phpunit": "*"
+                "phpunit/phpunit": "~4.0"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
             "autoload": {
                 "psr-0": {
                     "Dotenv": "src/"
@@ -220,8 +225,7 @@
                 {
                     "name": "Vance Lucas",
                     "email": "vance@vancelucas.com",
-                    "homepage": "http://www.vancelucas.com",
-                    "role": "Developer"
+                    "homepage": "http://www.vancelucas.com"
                 }
             ],
             "description": "Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically.",
@@ -231,25 +235,36 @@
                 "env",
                 "environment"
             ],
-            "time": "2014-01-31 16:18:39"
+            "time": "2014-12-05 15:19:21"
         },
         {
             "name": "weyforth/wordpress-themecommon",
-            "version": "3.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://bitbucket.org/weyforth/wordpress-themecommon/get/84deb97ffdb1.zip",
-                "reference": null,
-                "shasum": null
+            "version": "v1.2",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:weyforth/wordpress-themecommon.git",
+                "reference": "736b9726d88f74b49d8102f3579f7f53e814073a"
             },
-            "type": "wordpress-plugin"
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Weyforth\\ThemeCommon": "src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Mike Farrow",
+                    "email": "contact@mikefarrow.co.uk"
+                }
+            ],
+            "time": "2015-01-22 11:35:38"
         },
         {
             "name": "wordpress/wordpress",
-            "version": "3.9.2",
+            "version": "4.1",
             "dist": {
                 "type": "zip",
-                "url": "https://wordpress.org/wordpress-3.9.2.zip",
+                "url": "https://wordpress.org/wordpress-4.1.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -259,16 +274,16 @@
             "type": "webroot"
         },
         {
-            "name": "wpackagist/akismet",
-            "version": "dev-trunk",
+            "name": "wpackagist-plugin/akismet",
+            "version": "3.0.4",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/akismet/",
-                "reference": "trunk"
+                "reference": "tags/3.0.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/akismet.zip",
+                "url": "http://downloads.wordpress.org/plugin/akismet.3.0.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -276,20 +291,19 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "http://wordpress.org/plugins/akismet/",
-            "time": "2014-07-11 05:18:55"
+            "homepage": "https://wordpress.org/plugins/akismet/"
         },
         {
-            "name": "wpackagist/w3-total-cache",
-            "version": "dev-trunk",
+            "name": "wpackagist-plugin/w3-total-cache",
+            "version": "0.9.4.1",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/w3-total-cache/",
-                "reference": "trunk"
+                "reference": "tags/0.9.4.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/w3-total-cache.zip",
+                "url": "http://downloads.wordpress.org/plugin/w3-total-cache.0.9.4.1.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -297,8 +311,7 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "http://wordpress.org/plugins/w3-total-cache/",
-            "time": "2014-04-04 01:42:00"
+            "homepage": "https://wordpress.org/plugins/w3-total-cache/"
         },
         {
             "name": "wukka/nonce",
@@ -344,16 +357,16 @@
     ],
     "packages-dev": [
         {
-            "name": "wpackagist/ajax-thumbnail-rebuild",
-            "version": "dev-trunk",
+            "name": "wpackagist-plugin/ajax-thumbnail-rebuild",
+            "version": "1.12",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/ajax-thumbnail-rebuild/",
-                "reference": "trunk"
+                "reference": "tags/1.12"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/ajax-thumbnail-rebuild.zip",
+                "url": "http://downloads.wordpress.org/plugin/ajax-thumbnail-rebuild.1.12.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -361,20 +374,19 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "http://wordpress.org/plugins/ajax-thumbnail-rebuild/",
-            "time": "2014-05-04 08:45:49"
+            "homepage": "https://wordpress.org/plugins/ajax-thumbnail-rebuild/"
         },
         {
-            "name": "wpackagist/rewrite-rules-inspector",
-            "version": "dev-trunk",
+            "name": "wpackagist-plugin/rewrite-rules-inspector",
+            "version": "1.2.1",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/rewrite-rules-inspector/",
-                "reference": "trunk"
+                "reference": "tags/1.2.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/rewrite-rules-inspector.zip",
+                "url": "http://downloads.wordpress.org/plugin/rewrite-rules-inspector.1.2.1.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -382,20 +394,19 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "http://wordpress.org/plugins/rewrite-rules-inspector/",
-            "time": "2013-09-24 16:23:25"
+            "homepage": "https://wordpress.org/plugins/rewrite-rules-inspector/"
         },
         {
-            "name": "wpackagist/wordpress-importer",
-            "version": "dev-trunk",
+            "name": "wpackagist-plugin/wordpress-importer",
+            "version": "0.6.1",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/wordpress-importer/",
-                "reference": "trunk"
+                "reference": "tags/0.6.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/wordpress-importer.zip",
+                "url": "http://downloads.wordpress.org/plugin/wordpress-importer.0.6.1.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -403,22 +414,16 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "http://wordpress.org/plugins/wordpress-importer/",
-            "time": "2014-01-14 20:31:13"
+            "homepage": "https://wordpress.org/plugins/wordpress-importer/"
         }
     ],
-    "aliases": [
-
-    ],
+    "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [
-
-    ],
+    "stability-flags": [],
     "prefer-stable": false,
+    "prefer-lowest": false,
     "platform": {
         "php": ">=5.3.2"
     },
-    "platform-dev": [
-
-    ]
+    "platform-dev": []
 }

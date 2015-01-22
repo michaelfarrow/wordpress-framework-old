@@ -11,9 +11,13 @@ require(["config"], function() {
 
         require(["jquery", "fastclick"], function($, FastClick) {
 
+            var Roots = {
+
+            };
+
             // Use this variable to set up the common and page specific functions. If you 
             // rename this variable, you will also need to rename the namespace below.
-            var Roots = {
+            var Pages = {
                 // All pages
                 common: function() {
                     // JavaScript to be fired on all pages

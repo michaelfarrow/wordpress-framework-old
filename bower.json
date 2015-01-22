@@ -15,18 +15,18 @@
     "tests"
   ],
   "dependencies": {
-    "requirejs": null,
-    "requirejs-plugins": null,
-    "cookies-js": "*",
-    "jquery": "1.*",
-    "jquery-ui": "*",
-    "modernizr": null,
-    "underscore": null,
-    "underscore.string": null,
-    "backbone": null,
-    "handlebars": null,
-    "bootstrap-sass-official": null,
-    "fastclick": null,
-    "normalize.scss": null
+    "requirejs": "2.1.15",
+    "requirejs-plugins": "1.0.3",
+    "cookies-js": "1.1.0",
+    "jquery": "1.11.2",
+    "jquery-ui": "1.11.2",
+    "modernizr": "2.8.3",
+    "underscore": "1.7.0",
+    "underscore.string": "3.0.1",
+    "backbone": "1.1.2",
+    "handlebars": "2.0.0",
+    "bootstrap-sass-official": "3.3.3",
+    "fastclick": "1.0.3",
+    "normalize.scss": "2.2.0+normalize.2.1.3"
   }
 }

@@ -46,11 +46,11 @@
       "type": "package",
       "package": {
         "name": "wordpress/wordpress",
-        "version": "3.9.2",
+        "version": "4.1",
         "type": "webroot",
         "dist": {
           "type": "zip",
-          "url": "https://wordpress.org/wordpress-3.9.2.zip"
+          "url": "https://wordpress.org/wordpress-4.1.zip"
         },
         "require" : {
           "fancyguy/webroot-installer": "1.1.0"
@@ -58,47 +58,39 @@
       }
     },
     {
-      "type": "package",
-      "package": {
-        "name": "weyforth/wordpress-themecommon",
-        "version": "3.0",
-        "type": "wordpress-plugin",
-        "dist": {
-          "type": "zip",
-          "url": "https://bitbucket.org/weyforth/wordpress-themecommon/get/84deb97ffdb1.zip"
-        }
-      }
+      "type": "git",
+      "url": "git@bitbucket.org:weyforth/wordpress-themecommon.git"
     },
     {
       "type": "package",
       "package": {
         "name": "acf-u/advanced-custom-fields",
-        "version": "5.0",
+        "version": "5.1.6",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
-          "url": "http://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=b3JkZXJfaWQ9MzQ4NTl8dHlwZT1kZXZlbG9wZXJ8ZGF0ZT0yMDE0LTA3LTE1IDE2OjI5OjUw"
+          "url": "http://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=b3JkZXJfaWQ9MzQ4NTl8dHlwZT1kZXZlbG9wZXJ8ZGF0ZT0yMDE0LTA3LTE1IDE2OjI5OjUw&t=5.1.6"
         }
       }
     }
   ],
   "require": {
     "php": ">=5.3.2",
-    "wordpress/wordpress": "*",
+    "wordpress/wordpress": "4.1",
     "fancyguy/webroot-installer": "1.1.0",
     "composer/installers": "v1.0.12",
-    "vlucas/phpdotenv": "~1.0.6",
-    "acf-u/advanced-custom-fields": "5.*",
-    "wpackagist/akismet": "*",
-    "weyforth/wordpress-themecommon": "*",
-    "wpackagist/w3-total-cache": "*",
-    "gregwar/cache": "*",
+    "vlucas/phpdotenv": "v1.1.0",
+    "acf-u/advanced-custom-fields": "5.1.6",
+    "wpackagist-plugin/akismet": "3.0.4",
+    "weyforth/wordpress-themecommon": "1.2",
+    "wpackagist-plugin/w3-total-cache": "0.9.4.1",
+    "gregwar/cache": "1.0.10",
     "wukka/nonce": "*"
   },
   "require-dev": {
-    "wpackagist/ajax-thumbnail-rebuild": "*",
-    "wpackagist/wordpress-importer": "*",
-    "wpackagist/rewrite-rules-inspector": "*"
+    "wpackagist-plugin/ajax-thumbnail-rebuild": "1.12",
+    "wpackagist-plugin/wordpress-importer": "0.6.1",
+    "wpackagist-plugin/rewrite-rules-inspector": "1.2.1"
   },
   "extra": {
     "installer-paths": {
