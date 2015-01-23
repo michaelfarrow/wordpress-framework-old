@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "81742cd487343dbea4da17d4367ea7d1",
+    "hash": "a9c8d754794f36c7e0ff252806926cae",
     "packages": [
         {
             "name": "acf-u/advanced-custom-fields",
@@ -236,6 +236,31 @@
                 "environment"
             ],
             "time": "2014-12-05 15:19:21"
+        },
+        {
+            "name": "weyforth/php-meta",
+            "version": "v1.0",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:weyforth/php-meta.git",
+                "reference": "d36ffc67daba29b551c0f02b0dbe140f0e34952b"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Weyforth\\Meta": "src/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Mike Farrow",
+                    "email": "contact@mikefarrow.co.uk"
+                }
+            ],
+            "time": "2015-01-06 11:32:54"
         },
         {
             "name": "weyforth/wordpress-themecommon",
