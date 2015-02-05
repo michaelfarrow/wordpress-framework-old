@@ -95,5 +95,5 @@ module.exports = function(grunt) {
 
     grunt.registerTask('default', 'compass');
     grunt.registerTask('styles', ['compass', 'cssmin']);
-    grunt.registerTask('build', ['compass', 'copy', 'cssmin', 'requirejs', 'uglify', 'modernizr']);
+    grunt.registerTask('build', ['compass', 'copy', 'cssmin', 'requirejs', 'modernizr', 'uglify']);
 };
