@@ -31,11 +31,7 @@
     "psr-0": {"Bedrock\\Installer": "scripts"}
   },
   "scripts": {
-    "post-install-cmd": ["composer install"],
-    "post-install-cmd": ["bower install"],
-    "post-install-cmd": ["Bedrock\\Installer::addSalts"],
-    "post-update-cmd": ["composer update"],
-    "post-update-cmd": ["bower install"]
+    "post-install-cmd": ["Bedrock\\Installer::addSalts"]
   },
   "repositories": [
     {
@@ -46,11 +42,11 @@
       "type": "package",
       "package": {
         "name": "wordpress/wordpress",
-        "version": "4.1",
+        "version": "4.2.2",
         "type": "webroot",
         "dist": {
           "type": "zip",
-          "url": "https://wordpress.org/wordpress-4.1.zip"
+          "url": "https://wordpress.org/wordpress-4.2.2.zip"
         },
         "require" : {
           "fancyguy/webroot-installer": "1.1.0"
@@ -59,10 +55,10 @@
     },
     {
       "type": "git",
-      "url": "git@bitbucket.org:weyforth/wordpress-themecommon.git"
+      "url": "https://weyforth@bitbucket.org/weyforth/wordpress-themecommon.git"
     },
     {
-      "url": "git@bitbucket.org:weyforth/php-meta.git",
+      "url": "https://github.com/weyforth/php-meta.git",
       "type": "git"
     },
     {
@@ -80,7 +76,7 @@
   ],
   "require": {
     "php": ">=5.3.2",
-    "wordpress/wordpress": "4.1",
+    "wordpress/wordpress": "4.2.2",
     "fancyguy/webroot-installer": "1.1.0",
     "composer/installers": "v1.0.12",
     "vlucas/phpdotenv": "v1.1.0",

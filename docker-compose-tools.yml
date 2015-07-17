@@ -1,0 +1,19 @@
+db:
+  extends:
+    file: docker-compose.yml
+    service: db
+composer:
+  image: composer/composer
+  volumes:
+    - .:/app
+nodejsbowergrunt:
+  image: digitallyseamless/nodejs-bower-grunt
+  volumes:
+    - .:/data
+wpcli:
+  image: scjudd/wp-cli
+  volumes:
+    - .:/var/www
+    - public:/var/www/html
+  links:
+    - db

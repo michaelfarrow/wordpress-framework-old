@@ -1,0 +1,14 @@
+web:
+  image: php:5.6-apache
+  ports:
+    - "8080:80"
+  links:
+    - db
+  volumes:
+    - .:/var/www
+    - public:/var/www/html
+db:
+  image: mysql:5.6
+  environment:
+    MYSQL_DATABASE: wordpress
+    MYSQL_ROOT_PASSWORD: rootpass
