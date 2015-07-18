@@ -6,12 +6,12 @@ composer:
   image: composer/composer
   volumes:
     - .:/app
-nodejsbowergrunt:
-  image: digitallyseamless/nodejs-bower-grunt
+buildtools:
+  build: docker/build/buildtools
   volumes:
     - .:/data
 wpcli:
-  image: scjudd/wp-cli
+  build: docker/build/wpcli
   volumes:
     - .:/var/www
     - public:/var/www/html

@@ -9,6 +9,13 @@ if (file_exists($root_dir . '/.env')) {
   Dotenv::load($root_dir);
 }
 
+define('WP_HOME','http://' . $_SERVER['HTTP_HOST']);
+define('WP_SITEURL','http://' . $_SERVER['HTTP_HOST'] . '/wp');
+
+if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
+	$_SERVER['HTTPS'] = 'on';
+}
+
 Dotenv::required(array('WP_DB_NAME', 'WP_DB_USER', 'WP_DB_PASSWORD'));
 
 /**

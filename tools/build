@@ -1,0 +1,5 @@
+#!/bin/bash
+
+tools/composer install
+tools/npm install
+tools/bower install

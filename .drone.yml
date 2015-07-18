@@ -1,0 +1,15 @@
+image: weyforth/drone-docker
+script:
+  - tools/test
+deploy:
+  ssh:
+    target: deploy@host:app-build/
+    artifacts:
+      - .
+    cmd: app-build/tools/deploy
+    when:
+      branch: release
+notify:
+  email:
+    recipients:
+      - build@mikefarrow.co.uk

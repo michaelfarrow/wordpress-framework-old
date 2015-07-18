@@ -1,3 +1,24 @@
 #!/bin/bash
 
+set -e
+
+build_env="local"
+
+if [[ "$1" != "" ]];
+	then
+	build_env="$1"
+fi
+
+docker-compose pull
+docker-compose -f docker-compose-tools.yml pull
+
+cp ".env.$build_env" .env.example
+
+tools/build
+
+docker-compose -f docker-compose-tools.yml run --rm wpcli ../tools/dbisup
+
 tools/wp core install --url=http://dummy --title="Wordpress-Framework" --admin_user=admin --admin_password=adminpass --admin_email=contact@mikefarrow.co.uk
+tools/wp rewrite structure '/%postname%'
+tools/wp plugin activate --all
+tools/wp theme activate roots
