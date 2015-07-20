@@ -1,24 +1,25 @@
 /*
-Error: File to import not found or unreadable: ../../libs/bootstrap-sass-official/assets/stylesheets/bootstrap/bootstrap.scss.
+Error: File to import not found or unreadable: ../../../../vendor/weyforth/wordpress-themecommon/assets/sass/common.scss.
        Load paths:
          Compass::SpriteImporter
          /data/public/app/themes/roots/assets/sass
          /var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets
-        on line 5 of /data/public/app/themes/roots/assets/sass/main.scss
+        on line 7 of /data/public/app/themes/roots/assets/sass/main.scss
 
-1: /*!
 2:  * Roots 6.5.2
 3:  *\/
 4: 
-5: @import "../../libs/bootstrap-sass-official/assets/stylesheets/bootstrap/bootstrap.scss";
+5: @import "../../libs/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 6: // @import "../../libs/normalize.scss/_normalize.scss";
-7: @import "../../common/assets/sass/common.scss";
+7: @import "../../../../vendor/weyforth/wordpress-themecommon/assets/sass/common.scss";
 8: 
 9: 
 10: /* ==========================================================================
+11:    Base
+12:    ========================================================================== *\/
 
 Backtrace:
-/data/public/app/themes/roots/assets/sass/main.scss:5
+/data/public/app/themes/roots/assets/sass/main.scss:7
 /var/lib/gems/2.1.0/gems/sass-3.4.16/lib/sass/tree/import_node.rb:67:in `rescue in import'
 /var/lib/gems/2.1.0/gems/sass-3.4.16/lib/sass/tree/import_node.rb:45:in `import'
 /var/lib/gems/2.1.0/gems/sass-3.4.16/lib/sass/tree/import_node.rb:28:in `imported_file'
@@ -63,4 +64,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: ../../libs/bootstrap-sass-official/assets/stylesheets/bootstrap/bootstrap.scss.\A        Load paths:\A          Compass::SpriteImporter\A          /data/public/app/themes/roots/assets/sass\A          /var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets\A         on line 5 of /data/public/app/themes/roots/assets/sass/main.scss\A \A 1: /*!\A 2:  * Roots 6.5.2\A 3:  */\A 4: \A 5: @import \"../../libs/bootstrap-sass-official/assets/stylesheets/bootstrap/bootstrap.scss\";\A 6: // @import \"../../libs/normalize.scss/_normalize.scss\";\A 7: @import \"../../common/assets/sass/common.scss\";\A 8: \A 9: \A 10: /* =========================================================================="; }
+  content: "Error: File to import not found or unreadable: ../../../../vendor/weyforth/wordpress-themecommon/assets/sass/common.scss.\A        Load paths:\A          Compass::SpriteImporter\A          /data/public/app/themes/roots/assets/sass\A          /var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets\A         on line 7 of /data/public/app/themes/roots/assets/sass/main.scss\A \A 2:  * Roots 6.5.2\A 3:  */\A 4: \A 5: @import \"../../libs/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss\";\A 6: // @import \"../../libs/normalize.scss/_normalize.scss\";\A 7: @import \"../../../../vendor/weyforth/wordpress-themecommon/assets/sass/common.scss\";\A 8: \A 9: \A 10: /* ==========================================================================\A 11:    Base\A 12:    ========================================================================== */"; }
