@@ -11,8 +11,8 @@ fi
 
 cp ".env.$build_env" .env.example
 
-exec tools/composer install
-exec tools/npm install
-exec tools/bower install
+tools/composer install
+tools/npm install
+tools/bower install
 
 tools/grunt build
