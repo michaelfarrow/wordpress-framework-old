@@ -3,7 +3,7 @@ script:
   - tools/test
 deploy:
   ssh:
-    target: deploy@46.101.50.39:app-build/
+    target: deploy@46.101.34.92:app-build/
     artifacts:
       - .
     cmd: app-build/tools/deploy
