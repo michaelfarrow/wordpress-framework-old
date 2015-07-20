@@ -2,6 +2,15 @@
 
 set -e
 
+build_env="local"
+
+if [[ "$1" != "" ]];
+	then
+	build_env="$1"
+fi
+
+cp ".env.$build_env" .env.example
+
 tools/composer install
 tools/npm install
 tools/bower install
