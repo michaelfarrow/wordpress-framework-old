@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [[ $(docker ps | grep _web | grep Up) ]]; then
+
+	docker-compose build web
+	docker-compose up --no-deps -d web
+
+else
+
+	docker-compose up -d
+
+fi

@@ -3,12 +3,12 @@ script:
   - tools/test
 deploy:
   ssh:
-    target: deploy@host:app-build/
+    target: deploy@46.101.50.39:app-build/
     artifacts:
       - .
     cmd: app-build/tools/deploy
     when:
-      branch: release
+      branch: docker
 notify:
   email:
     recipients:

@@ -2,8 +2,10 @@
 
 set -e
 
-# rm -rf app
-# cp -r app-build app
+rm -rf app
+cp -r app-build app
+
+tools/start
 
 # mkdir -p app-shared
 # mkdir -p app-shared/logs

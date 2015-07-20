@@ -4,14 +4,19 @@ set -e
 
 [ -t 1 ] || params="-T"
 
-docker-compose pull
-docker-compose -f docker-compose-tools.yml pull
-
-tools/build "$@"
-
 docker-compose -f docker-compose-tools.yml run $params --rm wpcli ../tools/dbisup
 
-tools/wp core install --url=http://dummy --title="Wordpress-Framework" --admin_user=admin --admin_password=adminpass --admin_email=contact@mikefarrow.co.uk
-tools/wp rewrite structure '/%postname%'
-tools/wp plugin activate --all
-tools/wp theme activate roots
+if ! $(tools/wp core is-installed); then
+
+	echo "Installing"
+
+	tools/wp core install --url=http://dummy --title="Wordpress-Framework" --admin_user=admin --admin_password=adminpass --admin_email=contact@mikefarrow.co.uk
+	tools/wp rewrite structure '/%postname%'
+	tools/wp plugin activate --all
+	tools/wp theme activate roots
+
+else
+
+	echo "Already Installed"
+
+fi

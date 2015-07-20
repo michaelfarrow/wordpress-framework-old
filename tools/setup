@@ -1,7 +1,0 @@
-#!/bin/bash
-
-set -e
-
-tools/composer install
-tools/npm install
-tools/bower install
