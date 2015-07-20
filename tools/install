@@ -2,12 +2,12 @@
 
 set -e
 
-exec docker-compose pull
-exec docker-compose -f docker-compose-tools.yml pull
+docker-compose pull
+docker-compose -f docker-compose-tools.yml pull
 
 tools/build "$@"
 
-exec docker-compose -f docker-compose-tools.yml run --rm wpcli ../tools/dbisup
+docker-compose -f docker-compose-tools.yml run --rm wpcli ../tools/dbisup
 
 tools/wp core install --url=http://dummy --title="Wordpress-Framework" --admin_user=admin --admin_password=adminpass --admin_email=contact@mikefarrow.co.uk
 tools/wp rewrite structure '/%postname%'
