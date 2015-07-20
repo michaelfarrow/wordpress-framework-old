@@ -34,6 +34,12 @@ bin
 .vagrant
 
 /.sass-cache
+/public/app/themes/roots/assets/css/*
+!/public/app/themes/roots/assets/css/.gitkeep
+/public/app/themes/roots/assets/fonts/*
+!/public/app/themes/roots/assets/fonts/.gitkeep
+/public/app/themes/roots/assets/js/vendor/*
+!/public/app/themes/roots/assets/js/vendor/.gitkeep
 /public/app/themes/roots/libs
 /public/app/themes/roots/acf
 /public/app/themes/roots/acf-fields
