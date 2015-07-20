@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 i=0
 timeout=30
 host="db"
