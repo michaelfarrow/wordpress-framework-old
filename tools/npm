@@ -2,4 +2,4 @@
 
 set -e
 
-docker-compose -f docker-compose-tools.yml run --rm buildtools npm "$@"
+docker-compose -f docker-compose-tools.yml run -T --rm buildtools npm "$@"
