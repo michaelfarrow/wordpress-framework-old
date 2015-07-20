@@ -2,4 +2,4 @@
 
 set -e
 
-docker-compose -f docker-compose-tools.yml run --rm buildtools bower --allow-root --config.interactive=false "$@"
+exec docker-compose -f docker-compose-tools.yml run --rm buildtools bower --allow-root --config.interactive=false "$@"
