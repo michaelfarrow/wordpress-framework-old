@@ -2,7 +2,15 @@
 
 set -e
 
-tools/stop production
+if [[ -d app ]]; then
+
+	cd app
+
+	tools/stop production
+
+	cd ../
+
+fi
 
 rm -rf app
 cp -r app-build app
