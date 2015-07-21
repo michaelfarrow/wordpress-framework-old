@@ -2,6 +2,8 @@
 
 set -e
 
+tools/stop production
+
 rm -rf app
 cp -r app-build app
 
