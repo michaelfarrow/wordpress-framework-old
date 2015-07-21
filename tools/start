@@ -1,12 +1,19 @@
 #!/bin/bash
 
+build_env=""
+
+if [[ "$1" != "" ]];
+	then
+	build_env="-$1"
+fi
+
 if [[ $(docker ps | grep _web | grep Up) ]]; then
 
-	docker-compose build web
-	docker-compose up --no-deps -d web
+	docker-compose -f "docker-compose$build_env.yml" build web
+	docker-compose -f "docker-compose$build_env.yml" up --no-deps -d web
 
 else
 
-	docker-compose up -d
+	docker-compose -f "docker-compose$build_env.yml" up -d
 
 fi

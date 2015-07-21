@@ -7,7 +7,8 @@ cp -r app-build app
 
 cd app
 
-tools/start
+tools/start production
+tools/install
 
 # mkdir -p app-shared
 # mkdir -p app-shared/logs

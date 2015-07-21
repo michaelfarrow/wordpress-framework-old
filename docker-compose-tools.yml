@@ -1,6 +1,6 @@
 db:
   extends:
-    file: docker-compose.yml
+    file: docker-common.yml
     service: db
 composer:
   image: composer/composer

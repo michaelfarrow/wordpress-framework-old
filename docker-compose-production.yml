@@ -2,8 +2,6 @@ web:
   extends:
     file: docker-compose-common.yml
     service: web
-  ports:
-    - "80:80"
 db:
   extends:
     file: docker-compose-common.yml
