@@ -5,6 +5,8 @@ set -e
 rm -rf app
 cp -r app-build app
 
+cd app
+
 tools/start
 
 # mkdir -p app-shared
