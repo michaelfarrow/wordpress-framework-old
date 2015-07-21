@@ -4,7 +4,8 @@ web:
     service: web
   links:
     - db
+    - data
 db:
   extends:
     file: docker-compose-common.yml
-    service: web
+    service: db

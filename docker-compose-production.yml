@@ -9,4 +9,4 @@ web:
 db:
   extends:
     file: docker-compose-common.yml
-    service: web
+    service: db
