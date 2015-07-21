@@ -2,15 +2,11 @@
 
 set -e
 
-if [[ -d app ]]; then
+cd app-build
 
-	cd app
+tools/stop production
 
-	tools/stop production
-
-	cd ../
-
-fi
+cd ../
 
 rm -rf app
 cp -r app-build app
