@@ -9,8 +9,10 @@ if (file_exists($root_dir . '/.env')) {
   Dotenv::load($root_dir);
 }
 
-define('WP_HOME','http://' . $_SERVER['HTTP_HOST']);
-define('WP_SITEURL','http://' . $_SERVER['HTTP_HOST'] . '/wp');
+$http_host = array_key_exists('HTTP_HOST', $_SERVER) ? $_SERVER['HTTP_HOST'] : $_SERVER['REMOTE_ADDR'];
+
+define('WP_HOME', $http_host);
+define('WP_SITEURL','http://' . $http_host . '/wp');
 
 if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
 	$_SERVER['HTTPS'] = 'on';
@@ -33,7 +35,8 @@ if (file_exists($env_config)) {
 /**
  * Cache only on producton
  */
-define('WP_CACHE', (defined('WP_DEBUG') && WP_DEBUG === true) ? false : true);
+if (!defined('WP_CACHE'))
+	define('WP_CACHE', (defined('WP_DEBUG') && WP_DEBUG === true) ? false : true);
 
 /**
  * Custom Content Directory

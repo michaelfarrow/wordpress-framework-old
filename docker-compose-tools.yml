@@ -1,19 +1,36 @@
+storage:
+  extends:
+    file: docker-compose-common.yml
+    service: storage
+
+data:
+  extends:
+    file: docker-compose-common.yml
+    service: data
+
 db:
   extends:
     file: docker-compose-common.yml
     service: db
+  volumes_from:
+    - storage
+
 composer:
-  image: composer/composer
-  volumes:
-    - .:/app
-buildtools:
-  build: docker/build/buildtools
-  volumes:
-    - .:/data
+  image: weyforth/laravel-composer
+  volumes_from:
+    - storage
+    - data
+
 wpcli:
-  build: docker/build/wpcli
-  volumes:
-    - .:/var/www
-    - public:/var/www/html
+  image: weyforth/wordpress-wpcli
+  volumes_from:
+    - storage
+    - data
   links:
     - db
+
+buildtools:
+  image: weyforth/laravel-buildtools
+  volumes_from:
+    - storage
+    - data

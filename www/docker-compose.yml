@@ -1,0 +1,10 @@
+web:
+  extends:
+    file: docker-compose-common.yml
+    service: web
+  links:
+    - db
+db:
+  extends:
+    file: docker-compose-common.yml
+    service: db

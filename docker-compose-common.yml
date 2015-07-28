@@ -1,12 +1,15 @@
-web:
-  build: .
-  ports:
-    - "8080:80"
+storage:
+  image: weyforth/wordpress-base
   volumes:
-    - .:/var/www
-    - public:/var/www/html
+    - /uploads
+
+data:
+  image: weyforth/wordpress-base
+  volumes:
+    - .:/data:rw
+
 db:
   image: mysql:5.6
   environment:
     MYSQL_DATABASE: wordpress
-    MYSQL_ROOT_PASSWORD: rootpass
+    MYSQL_ROOT_PASSWORD: dbpass

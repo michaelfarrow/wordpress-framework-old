@@ -1,0 +1,41 @@
+# WordPress
+public/wp
+
+# WP-CLI
+db-sync
+sql-dump-*.sql
+
+# Dotenv
+.env
+.env.example
+
+# Application
+public/app/plugins/*
+!public/app/plugins/.gitkeep
+public/app/mu-plugins/*
+!public/app/mu-plugins/.gitkeep
+public/app/upgrade
+public/app/uploads/*
+!public/app/uploads/.gitkeep
+!public/app/mu-plugins/register-theme-directory.php
+
+# Vendor (e.g. Composer)
+vendor/*
+!vendor/.gitkeep
+
+# Node Package Manager
+node_modules
+
+.sass-cache
+public/app/themes/roots/assets/css/*
+!public/app/themes/roots/assets/css/.gitkeep
+public/app/themes/roots/assets/fonts/*
+!public/app/themes/roots/assets/fonts/.gitkeep
+public/app/themes/roots/assets/js/vendor/*
+!public/app/themes/roots/assets/js/vendor/.gitkeep
+public/app/themes/roots/libs
+public/app/themes/roots/acf
+public/app/themes/roots/acf-fields
+public/app/themes/roots/common
+public/app/cache/
+public/app/w3tc-config/

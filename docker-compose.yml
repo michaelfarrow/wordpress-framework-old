@@ -1,11 +1,33 @@
-web:
+storage:
   extends:
     file: docker-compose-common.yml
-    service: web
-  links:
-    - db
-    - data
+    service: storage
+
+data:
+  extends:
+    file: docker-compose-common.yml
+    service: data
+
 db:
   extends:
     file: docker-compose-common.yml
     service: db
+
+fpm:
+  image: weyforth/wordpress-phpfpm
+  links:
+    - db
+  volumes_from:
+    - storage
+    - data
+
+nginx:
+  image: weyforth/wordpress-nginx
+  links:
+    - fpm
+    - db
+  volumes_from:
+    - storage
+    - data
+  ports:
+    - "80:80"

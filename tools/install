@@ -2,6 +2,13 @@
 
 set -e
 
+install_env="local"
+
+if [[ "$1" != "" ]];
+	then
+	install_env="$1"
+fi
+
 [ -t 1 ] || params="-T"
 
 docker-compose -f docker-compose-tools.yml run $params --rm wpcli ../tools/dbisup
@@ -13,6 +20,11 @@ if ! $(tools/wp core is-installed); then
 	tools/wp core install --url=http://dummy --title="Wordpress-Framework" --admin_user=admin --admin_password=adminpass --admin_email=contact@mikefarrow.co.uk
 	tools/wp rewrite structure '/%postname%'
 	tools/wp plugin activate --all
+
+	if [[ "$install_env" == "local" ]]; then
+		tools/wp plugin deactivate w3-total-cache
+	fi
+
 	tools/wp theme activate roots
 
 else
