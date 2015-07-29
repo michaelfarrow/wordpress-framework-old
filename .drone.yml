@@ -1,4 +1,6 @@
 image: weyforth/drone-docker
+environment:
+  LOG: file
 script:
   - tools/pre_deploy
 deploy:
