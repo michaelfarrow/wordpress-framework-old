@@ -14,7 +14,9 @@ db:
     service: db
 
 fpm:
-  image: weyforth/wordpress-phpfpm
+  extends:
+    file: docker-compose-common.yml
+    service: fpm
   links:
     - db
   volumes_from:
@@ -22,12 +24,12 @@ fpm:
     - data
 
 nginx:
-  image: weyforth/wordpress-nginx
+  extends:
+    file: docker-compose-common.yml
+    service: nginx
   links:
     - fpm
     - db
   volumes_from:
     - storage
     - data
-  ports:
-    - "80:80"

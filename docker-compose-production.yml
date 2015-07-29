@@ -1,24 +1,35 @@
 storage:
   extends:
-    file: docker-compose.yml
+    file: docker-compose-common.yml
     service: storage
 
 data:
   extends:
-    file: docker-compose.yml
+    file: docker-compose-common.yml
     service: data
 
 db:
   extends:
-    file: docker-compose.yml
+    file: docker-compose-common.yml
     service: db
 
 fpm:
   extends:
-    file: docker-compose.yml
+    file: docker-compose-common.yml
     service: fpm
+  links:
+    - db
+  volumes_from:
+    - storage
+    - data
 
 nginx:
   extends:
-    file: docker-compose.yml
+    file: docker-compose-common.yml
     service: nginx
+  links:
+    - fpm
+    - db
+  volumes_from:
+    - storage
+    - data

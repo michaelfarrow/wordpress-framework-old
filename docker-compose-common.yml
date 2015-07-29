@@ -13,3 +13,11 @@ db:
   environment:
     MYSQL_DATABASE: wordpress
     MYSQL_ROOT_PASSWORD: dbpass
+
+fpm:
+  image: weyforth/wordpress-phpfpm
+
+nginx:
+  image: weyforth/wordpress-nginx
+  ports:
+    - "80:80"
