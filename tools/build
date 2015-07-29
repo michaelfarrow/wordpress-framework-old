@@ -9,12 +9,22 @@ if [[ "$1" != "" ]];
 	build_env="$1"
 fi
 
+composer_args=""
+bower_args=""
+npm_args=""
+
+if [[ "$install_env" != "local" ]]; then
+	composer_args="--quiet"
+	bower_args="--quiet"
+	npm_args="--silent"
+fi
+
 cp "www/.env.$build_env" www/.env.example
 
 tools/build_link
 
-tools/composer install
-tools/npm install
-tools/bower install
+tools/composer install $composer_args
+tools/npm install $npm_args
+tools/bower install $bower_args
 
 tools/gulp
