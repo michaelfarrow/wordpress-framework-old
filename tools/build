@@ -24,8 +24,8 @@ bower_args=""
 npm_args=""
 
 if [[ "$build_env" != "local" ]]; then
-	composer_args="--quiet"
-	bower_args="--quiet"
+	composer_args="--no-progress"
+	bower_args=""
 	npm_args="--silent"
 fi
 
