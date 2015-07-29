@@ -17,4 +17,4 @@ tools/composer install
 tools/npm install
 tools/bower install
 
-tools/gulp build
+tools/gulp

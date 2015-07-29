@@ -8,7 +8,7 @@ deploy:
       - scp -o StrictHostKeyChecking=no -P 22 -r . deploy@46.101.34.92:app-build/
       - ssh deploy@46.101.34.92 app-build/tools/deploy
     when:
-      branch: docker
+      branch: release
 notify:
   email:
     recipients:
