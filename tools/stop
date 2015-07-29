@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source tools/_functions
+
 build_env=""
 
 if [[ "$1" != "" ]];
