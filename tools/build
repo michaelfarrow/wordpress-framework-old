@@ -1,14 +1,6 @@
 #!/bin/bash
 
-function heading {
-	echo ""
-	str="$@"
-	len=$((${#str}+4))
-	for i in $(seq $len); do echo -n '*'; done;
-	echo; echo "* "$str" *";
-	for i in $(seq $len); do echo -n '*'; done;
-	echo
-}
+source tools/_functions
 
 set -e
 

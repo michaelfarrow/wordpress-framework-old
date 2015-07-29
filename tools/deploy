@@ -1,24 +1,31 @@
 #!/bin/bash
 
+source tools/_functions
+
 set -e
 
 if [[ -d app ]]; then
 
 	cd app
 
+	heading "Stopping"
 	tools/stop production
 
 	cd ../
 
 fi
 
+heading "Copying files"
+
 rm -rf app
 cp -r app-build app
 
 cd app
 
+heading "Starting"
 tools/start production
-tools/install
+
+tools/install production
 
 # mkdir -p app-shared
 # mkdir -p app-shared/logs
