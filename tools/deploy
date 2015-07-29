@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source tools/_functions
+source app-build/tools/_functions
 
 set -e
 
