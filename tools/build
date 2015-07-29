@@ -25,7 +25,7 @@ npm_args=""
 
 if [[ "$build_env" != "local" ]]; then
 	composer_args="--no-progress"
-	bower_args=""
+	bower_args="--log-level=action"
 	npm_args="--silent"
 fi
 
