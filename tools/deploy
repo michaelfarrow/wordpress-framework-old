@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source app-build/tools/_functions
+
 set -e
 
 if [[ -d app ]]; then
@@ -14,8 +16,7 @@ fi
 
 heading "Copying files"
 
-rm -rf app
-cp -r app-build app
+rm -rf app && cp -r app-build app && echo "done"
 
 cd app
 

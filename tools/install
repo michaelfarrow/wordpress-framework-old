@@ -20,7 +20,7 @@ heading "Installing"
 
 if ! $(tools/wp core is-installed); then
 
-	tools/wp core install --url=http://dummy --title="Wordpress-Framework" --admin_user=admin --admin_password=adminpass --admin_email=contact@mikefarrow.co.uk
+	tools/wp core install --url=http://127.0.0.1 --title="Wordpress-Framework" --admin_user=admin --admin_password=adminpass --admin_email=contact@mikefarrow.co.uk
 	tools/wp rewrite structure '/%postname%'
 	tools/wp plugin activate --all
 
