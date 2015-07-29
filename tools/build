@@ -22,6 +22,11 @@ fi
 cp "www/.env.$build_env" www/.env.example
 
 echo ""
+echo "Pulling Docker images"
+docker-compose -f docker-compose-tools.yml pull >/dev/null
+echo "done"
+
+echo ""
 echo "Linking npm tools"
 tools/build_link
 
