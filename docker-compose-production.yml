@@ -1,0 +1,24 @@
+storage:
+  extends:
+    file: docker-compose.yml
+    service: storage
+
+data:
+  extends:
+    file: docker-compose.yml
+    service: data
+
+db:
+  extends:
+    file: docker-compose.yml
+    service: db
+
+fpm:
+  extends:
+    file: docker-compose.yml
+    service: fpm
+
+nginx:
+  extends:
+    file: docker-compose.yml
+    service: nginx
