@@ -1,6 +1,7 @@
 #!/bin/bash
 
 function heading {
+	echo ""
 	str="$@"
 	len=$((${#str}+4))
 	for i in $(seq $len); do echo -n '*'; done;
