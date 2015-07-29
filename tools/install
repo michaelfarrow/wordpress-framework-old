@@ -13,11 +13,6 @@ fi
 
 [ -t 1 ] || params="-T"
 
-if [[ "$build_env" != "local" ]]; then
-	heading "Pulling Docker images"
-	docker-compose -f docker-compose-tools.yml pull >/dev/null
-fi
-
 heading "Database"
 docker-compose -f docker-compose-tools.yml run $params --rm wpcli ../tools/dbisup
 
