@@ -21,10 +21,22 @@ fi
 
 cp "www/.env.$build_env" www/.env.example
 
+echo ""
+echo "Linking npm tools"
 tools/build_link
 
+echo ""
+echo "Installing Composer dependencies"
 tools/composer install $composer_args
+
+echo ""
+echo "Installing NPM dependencies"
 tools/npm install $npm_args
+
+echo ""
+echo "Installing Bower dependencies"
 tools/bower install $bower_args
 
+echo ""
+echo "Gulping"
 tools/gulp
