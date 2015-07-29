@@ -1,5 +1,14 @@
 #!/bin/bash
 
+function heading {
+	str="$@"
+	len=$((${#str}+4))
+	for i in $(seq $len); do echo -n '*'; done;
+	echo; echo "* "$str" *";
+	for i in $(seq $len); do echo -n '*'; done;
+	echo
+}
+
 set -e
 
 build_env="local"
@@ -13,7 +22,7 @@ composer_args=""
 bower_args=""
 npm_args=""
 
-if [[ "$install_env" != "local" ]]; then
+if [[ "$build_env" != "local" ]]; then
 	composer_args="--quiet"
 	bower_args="--quiet"
 	npm_args="--silent"
@@ -21,27 +30,22 @@ fi
 
 cp "www/.env.$build_env" www/.env.example
 
-echo ""
-echo "Pulling Docker images"
-docker-compose -f docker-compose-tools.yml pull >/dev/null
-echo "done"
+if [[ "$build_env" != "local" ]]; then
+	heading "Pulling Docker images"
+	docker-compose -f docker-compose-tools.yml pull >/dev/null
+fi
 
-echo ""
-echo "Linking npm tools"
+heading "Linking npm tools"
 tools/build_link
 
-echo ""
-echo "Installing Composer dependencies"
+heading "Installing Composer dependencies"
 tools/composer install $composer_args
 
-echo ""
-echo "Installing NPM dependencies"
+heading "Installing NPM dependencies"
 tools/npm install $npm_args
 
-echo ""
-echo "Installing Bower dependencies"
+heading "Installing Bower dependencies"
 tools/bower install $bower_args
 
-echo ""
-echo "Gulping"
+heading "Gulping"
 tools/gulp
