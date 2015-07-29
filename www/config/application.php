@@ -9,10 +9,10 @@ if (file_exists($root_dir . '/.env')) {
   Dotenv::load($root_dir);
 }
 
-$http_host = array_key_exists('HTTP_HOST', $_SERVER) ? $_SERVER['HTTP_HOST'] : $_SERVER['REMOTE_ADDR'];
+$http_host = 'http://' . (array_key_exists('HTTP_HOST', $_SERVER) ? $_SERVER['HTTP_HOST'] : $_SERVER['REMOTE_ADDR']);
 
 define('WP_HOME', $http_host);
-define('WP_SITEURL','http://' . $http_host . '/wp');
+define('WP_SITEURL', $http_host . '/wp');
 
 if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
 	$_SERVER['HTTPS'] = 'on';

@@ -27,6 +27,8 @@ tools/start production
 
 tools/install production
 
+echo ""
+
 # mkdir -p app-shared
 # mkdir -p app-shared/logs
 

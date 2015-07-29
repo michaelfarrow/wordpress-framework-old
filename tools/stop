@@ -9,7 +9,7 @@ fi
 
 if [[ $(docker ps | grep Up) ]]; then
 
-	docker-compose -f "docker-compose$build_env.yml" stop web
-	docker-compose rm
+	docker-compose -f "docker-compose$build_env.yml" stop nginx
+	docker-compose -f "docker-compose$build_env.yml" rm -fv data
 
 fi
