@@ -8,6 +8,7 @@ if [[ -d app ]]; then
 
 	cd app
 
+	docker-compose run --rm data rm -rf /data/www
 	tools/stop production
 
 	cd ../
