@@ -9,10 +9,12 @@ if [[ "$1" != "" ]];
 	build_env="$1"
 fi
 
-cp ".env.$build_env" .env.example
+cp "www/.env.$build_env" www/.env.example
+
+tools/build_link
 
 tools/composer install
 tools/npm install
 tools/bower install
 
-tools/grunt build
+tools/gulp build

@@ -1,0 +1,16 @@
+assets/css/*
+!assets/css/.gitkeep
+!assets/css/.minified/.gitkeep
+!assets/css/.compiled/.gitkeep
+assets/fonts/vendor/*
+!assets/fonts/vendor/.gitkeep
+assets/js/vendor/*
+!assets/js/vendor/.gitkeep
+assets/js/vendor/.minified
+!assets/js/vendor/.minified/.gitkeep
+assets/js/.minified/*
+!assets/js/.minified/.gitkeep
+libs
+acf
+acf-fields
+common

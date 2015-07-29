@@ -50,18 +50,18 @@ module.exports = function(grunt) {
                 ext: '.min.css'
             }
         },
-        copy: {
-            all: {
-                files: [
-                    {
-                        cwd: themeLibs + '/requirejs',
-                        src: 'require.js',
-                        dest: themeAssets + '/js/vendor',
-                        expand: true
-                    },
-                ]
-            }
-        },
+        // copy: {
+        //     all: {
+        //         files: [
+        //             {
+        //                 cwd: themeLibs + '/requirejs',
+        //                 src: 'require.js',
+        //                 dest: themeAssets + '/js/vendor',
+        //                 expand: true
+        //             },
+        //         ]
+        //     }
+        // },
         requirejs: {
             compile: {
                 options: {

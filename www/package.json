@@ -7,13 +7,6 @@
   ],
   "license": "Proprietary",
   "devDependencies": {
-    "grunt": "~0.4.2",
-    "grunt-contrib-compass": "~0.2.0",
-    "grunt-contrib-uglify": "*",
-    "grunt-contrib-cssmin": "*",
-    "grunt-contrib-copy": "*",
-    "grunt-contrib-watch": "*",
-    "grunt-contrib-requirejs": "*",
-    "grunt-modernizr": "*"
+
   }
 }

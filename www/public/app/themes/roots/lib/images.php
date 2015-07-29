@@ -3,7 +3,7 @@
 // Custom Image Quality
 
 function roots_jpeg_quality_callback($arg) {
-   return (int)80;
+   return (int)ROOTS_IMAGE_QUALITY;
 }
 
 add_filter('jpeg_quality', 'roots_jpeg_quality_callback');

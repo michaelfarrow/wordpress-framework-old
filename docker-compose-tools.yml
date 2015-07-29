@@ -16,7 +16,7 @@ db:
     - storage
 
 composer:
-  image: weyforth/laravel-composer
+  image: weyforth/wordpress-composer
   volumes_from:
     - storage
     - data
@@ -30,7 +30,7 @@ wpcli:
     - db
 
 buildtools:
-  image: weyforth/laravel-buildtools
+  image: weyforth/wordpress-buildtools
   volumes_from:
     - storage
     - data
