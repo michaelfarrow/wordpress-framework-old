@@ -1,7 +1,7 @@
 storage:
   image: weyforth/wordpress-base
   volumes:
-    - /uploads
+    - /storage
 
 data:
   image: weyforth/wordpress-base

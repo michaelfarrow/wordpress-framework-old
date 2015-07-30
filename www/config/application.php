@@ -41,7 +41,12 @@ if (!defined('WP_CACHE'))
 /**
  * Custom Content Directory
  */
+
+if(!is_dir('/storage/uploads'))
+	mkdir('/storage/uploads');
+
 define('CONTENT_DIR', '/app');
+define('UPLOADS', '/storage/uploads' );
 define('WP_CONTENT_DIR', $webroot_dir . CONTENT_DIR);
 define('WP_CONTENT_URL', WP_HOME . CONTENT_DIR);
 
