@@ -3,8 +3,10 @@
 add_filter('upload_dir', function($data){
 	$base = '/storage/uploads';
 
-	if(posix_geteuid() != 0 && !is_dir($base))
-		mkdir($base);
+	if(!is_dir($base)){
+		@mkdir($base);
+		@chown($base, 'www-data');
+	}
 
 	$data['path'] = $base . substr($data['path'], strpos($data['path'], '/uploads') + 8);
 	$data['basedir'] = $base . substr($data['basedir'], strpos($data['basedir'], '/uploads') + 8);
