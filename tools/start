@@ -18,7 +18,7 @@ heading "Starting"
 
 if [[ $(docker-compose ps | grep _nginx) ]]; then
 
-	docker-compose -f "docker-compose$build_env.yml" up --no-recreate -d nginx
+	docker-compose -f "docker-compose$build_env.yml" up --no-recreate -d db fpm nginx
 
 else
 
