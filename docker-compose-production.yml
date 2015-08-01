@@ -12,6 +12,7 @@ db:
   extends:
     file: docker-compose-common.yml
     service: db
+  restart: always
 
 fpm:
   extends:
@@ -22,6 +23,7 @@ fpm:
   volumes_from:
     - storage
     - data
+  restart: always
 
 nginx:
   extends:
@@ -33,3 +35,5 @@ nginx:
   volumes_from:
     - storage
     - data
+  restart: always
+
