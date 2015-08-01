@@ -28,8 +28,6 @@ if ! $(tools/wp core is-installed); then
 		tools/wp plugin deactivate disqus-comment-system
 	fi
 
-	tools/wp widget delete sidebar-primary recent-comments
-
 	# A bit of a cheat so we don't have to explicitly set each key.
 	# versions < current (6) and greater >= 5 will have their keys populated normally
 	tools/wp option update disable_comments_options '{"remove_everywhere":true,"disabled_post_types":["post","page","attachment"],"db_version":5}' --format=json
