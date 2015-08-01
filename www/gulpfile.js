@@ -83,6 +83,7 @@ gulp.task('default', [
 	'copy-bootstrap-fonts',
 	'custom-modernizr',
 	'compile-compass',
+	'lint-js',
 	'compile-js'
 ]);
 
