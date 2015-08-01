@@ -1,21 +1,27 @@
-var gulp = require('gulp'),
-    copy = require('gulp-copy'),
-    minify = require('gulp-minify-css'),
-    uglify = require('gulp-uglify'),
-    compass = require('gulp-compass'),
+var gulp      = require('gulp'),
+    copy      = require('gulp-copy'),
+    size      = require('gulp-size'),
+    minify    = require('gulp-minify-css'),
+    uglify    = require('gulp-uglify'),
+    jshint    = require('gulp-jshint'),
+    jshint_s  = require('jshint-stylish'),
+    compass   = require('gulp-compass'),
     requirejs = require('gulp-requirejs-optimize'),
     modernizr = require('gulp-modulizr');
 
 gulp.task('copy-requirejs', function() {
 	return gulp.src(path.bower('requirejs/require.js').s())
 		.pipe(gulp.dest(path.js().vendor().s()))
+		.pipe(size({ title:'Original', showFiles:true }))
 		.pipe(uglify())
-		.pipe(gulp.dest(path.js().vendor().minified().s()));
+		.pipe(gulp.dest(path.js().vendor().minified().s()))
+		.pipe(size({ title:'Optimized', showFiles:true, gzip:true }))
 });
 
 gulp.task('copy-bootstrap-fonts', function() {
-	return gulp.src(path.bower('bootstrap-sass-official/assets/fonts/bootstrap/*').s())
-		.pipe(gulp.dest(path.fonts().vendor().append('bootstrap').s()));
+	result = gulp.src(path.bower('bootstrap-sass-official/assets/fonts/bootstrap/*').s())
+		.pipe(gulp.dest(path.fonts().vendor().append('bootstrap').s()))
+		.pipe(size({ title:'Bootstrap Fonts', gzip:true }));
 });
 
 gulp.task('compile-compass', function() {
@@ -26,11 +32,16 @@ gulp.task('compile-compass', function() {
 			image: path.images().s()
 		}))
 		.pipe(minify())
-		.pipe(gulp.dest(path.css().minified().s()))
+		.pipe(gulp.dest(path.css().minified().s()));
 });
 
 gulp.task('custom-modernizr', function() {
+	var sizeOptions = {
+		showFiles: true,
+	}
+
 	return gulp.src(path.bower('modernizr/modernizr.js').s())
+		.pipe(size({ title:'Original', showFiles:true }))
 		.pipe(modernizr([
 			'cssclasses',
 			'rgba',
@@ -40,16 +51,45 @@ gulp.task('custom-modernizr', function() {
 		]))
 		.pipe(gulp.dest(path.js().vendor().s()))
 		.pipe(uglify())
-		.pipe(gulp.dest(path.js().vendor().minified().s()));
+		.pipe(gulp.dest(path.js().vendor().minified().s()))
+		.pipe(size({ title:'Optimized', showFiles:true, gzip:true }));
 });
 
+gulp.task('lint-js', function() {
+	return gulp.src(path.js().append('*.js').s())
+		.pipe(jshint())
+		.pipe(jshint.reporter(jshint_s))
+		.pipe(jshint.reporter('fail'));
+});
+
+gulp.task('compile-js', function () {
+	return gulp.src(path.js().append('main.js').s())
+		.pipe(requirejs({
+			optimize: 'none',
+			findNestedDependencies: true,
+			baseUrl: path.theme().s(),
+			mainConfigFile: path.js().append('config.js').s(),
+			name: 'assets/js/main',
+		}))
+		.pipe(gulp.dest(path.js().compiled().s()))
+		.pipe(size({ title:'Original', showFiles:true }))
+		.pipe(uglify())
+		.pipe(gulp.dest(path.js().minified().s()))
+		.pipe(size({ title:'Optimized', showFiles:true, gzip:true }));
+});
 
 gulp.task('default', [
 	'copy-requirejs',
 	'copy-bootstrap-fonts',
+	'custom-modernizr',
 	'compile-compass',
-	'custom-modernizr'
+	'compile-js'
 ]);
+
+gulp.task('watch', function() {
+	gulp.watch(path.sass().append('*.scss').s(), ['compile-compass']);
+	gulp.watch(path.js().append('*.js').s(), ['lint-js']);
+});
 
 
 function path(p, f){

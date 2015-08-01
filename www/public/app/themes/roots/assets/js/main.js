@@ -11,7 +11,7 @@ require(["config"], function() {
 
         require(["jquery", "fastclick"], function($, FastClick) {
 
-            var Roots = {
+            var Root = {
 
             };
 
@@ -74,7 +74,7 @@ require(["config"], function() {
                             classnm = classnm.substring(0, classnm.length - 4);
 
                             // Strip repeating 'template'
-                            classnm = classnm.replace('page_template_template_', 'page_template_')
+                            classnm = classnm.replace('page_template_template_', 'page_template_');
                         }
 
                         Router.fire(classnm);

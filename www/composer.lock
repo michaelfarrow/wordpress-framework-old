@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3cf709a6a95b9a8d80cfe1a3beb49385",
+    "hash": "4e5ce21dd7dbafd6766d2e2c8ca38ed5",
     "packages": [
         {
             "name": "acf-u/advanced-custom-fields",
@@ -144,49 +144,6 @@
             "time": "2013-03-15 17:51:14"
         },
         {
-            "name": "gregwar/cache",
-            "version": "v1.0.10",
-            "target-dir": "Gregwar/Cache",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Gregwar/Cache.git",
-                "reference": "0a1a02e4943e95f491b3d2395609247385975622"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Gregwar/Cache/zipball/0a1a02e4943e95f491b3d2395609247385975622",
-                "reference": "0a1a02e4943e95f491b3d2395609247385975622",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Gregwar\\Cache": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Gregwar",
-                    "email": "g.passault@gmail.com"
-                }
-            ],
-            "description": "A lightweight file-system cache system",
-            "keywords": [
-                "cache",
-                "caching",
-                "file-system",
-                "system"
-            ],
-            "time": "2014-09-24 11:23:30"
-        },
-        {
             "name": "vlucas/phpdotenv",
             "version": "v1.1.0",
             "source": {
@@ -263,14 +220,14 @@
             "time": "2015-01-06 11:32:54"
         },
         {
-            "name": "weyforth/wordpress-themecommon",
-            "version": "v1.2",
+            "name": "weyforth/root-theme-tools",
+            "version": "v1.0",
             "source": {
                 "type": "git",
-                "url": "https://weyforth@bitbucket.org/weyforth/wordpress-themecommon.git",
-                "reference": "736b9726d88f74b49d8102f3579f7f53e814073a"
+                "url": "https://github.com/weyforth/wordpress-root-theme-tools.git",
+                "reference": "c71b5ee191f630d5ba550915bfc3fa9dc9de23ed"
             },
-            "type": "library",
+            "type": "wordpress-muplugin",
             "autoload": {
                 "psr-0": {
                     "Weyforth\\ThemeCommon": "src/"
@@ -282,7 +239,7 @@
                     "email": "contact@mikefarrow.co.uk"
                 }
             ],
-            "time": "2015-01-22 11:35:38"
+            "time": "2015-08-01 13:09:25"
         },
         {
             "name": "wordpress/wordpress",
@@ -299,16 +256,16 @@
             "type": "webroot"
         },
         {
-            "name": "wpackagist-plugin/akismet",
-            "version": "3.0.4",
+            "name": "wpackagist-plugin/disable-comments",
+            "version": "1.3.1",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/akismet/",
-                "reference": "tags/3.0.4"
+                "url": "http://plugins.svn.wordpress.org/disable-comments/",
+                "reference": "tags/1.3.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/akismet.3.0.4.zip",
+                "url": "https://downloads.wordpress.org/plugin/disable-comments.1.3.1.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -316,19 +273,19 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/akismet/"
+            "homepage": "https://wordpress.org/plugins/disable-comments/"
         },
         {
-            "name": "wpackagist-plugin/w3-total-cache",
-            "version": "0.9.4.1",
+            "name": "wpackagist-plugin/disqus-comment-system",
+            "version": "2.84",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/w3-total-cache/",
-                "reference": "tags/0.9.4.1"
+                "url": "http://plugins.svn.wordpress.org/disqus-comment-system/",
+                "reference": "trunk"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/w3-total-cache.0.9.4.1.zip",
+                "url": "https://downloads.wordpress.org/plugin/disqus-comment-system.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -336,7 +293,7 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/w3-total-cache/"
+            "homepage": "https://wordpress.org/plugins/disqus-comment-system/"
         },
         {
             "name": "wukka/nonce",
