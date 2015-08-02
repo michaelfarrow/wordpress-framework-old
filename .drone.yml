@@ -3,8 +3,10 @@ env:
   - LOG=file
 script:
   - tools/pre_deploy
+name: "test name"
 branches:
   - master
+  - docker
 deploy:
   bash:
     script:
