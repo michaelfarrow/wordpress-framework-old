@@ -3,6 +3,9 @@ env:
   - LOG=file
 script:
   - tools/pre_deploy
+when:
+  branch:
+    - master
 deploy:
   bash:
     script:
